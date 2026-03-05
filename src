@@ -4,9 +4,10 @@ Footer.tsx
 Toast.tsx
 admin.tsx
 home.tsx
-resumebuilder.tsx
+resumebuilder.tsx  
 samplesvault.tsx
 employerportal.tsx
 payportal.tsx
 index.tsx
 Chatbot.tsx
+Main.tsx
