@@ -1,6 +1,6 @@
 
 import React, { useEffect } from "react";
-
+import Totals from "./Totals";
 function App() {
   useEffect(() => {
     const script = document.createElement("script");
