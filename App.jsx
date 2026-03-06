@@ -14,6 +14,7 @@ function App() {
       <div className="container">
         
         {/* Navbar */}
+        <Totals />
         <div className="navbar">
           <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
             <div className="logo">
