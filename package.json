@@ -10,13 +10,8 @@
   },
   "dependencies": {
     "react": "^18.3.1",
-<<<<<<< HEAD
     "react-dom": "^18.3.1",
-    "react-router-dom": "^7.13.1"
-=======
-    "react-dom": "^18.3.1"
     "react-router-dom": "^6.22.0"
->>>>>>> f391e243a3b5b908fee94b5024108586c2b9ff94
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.2.1",
