@@ -96,7 +96,101 @@ const Home: React.FC<{ addToast?: (msg: string, type?: 'info' | 'success') => vo
       setTimeout(() => setSubSuccess(false), 5000);
     }, 1500);
   };
+{/* ========== ₹49 & ₹99 PLANS ========== */}
+<section className="bg-white dark:bg-slate-900 py-16 px-6">
+  <div className="max-w-6xl mx-auto">
+    <div className="text-center mb-12">
+      <h3 className="text-sm font-black text-yellow-600 dark:text-yellow-500 uppercase tracking-[0.3em] mb-3">
+        Your Career, Engineered
+      </h3>
+      <h2 className="text-4xl font-bold text-slate-900 dark:text-white">
+        Choose Your Advantage
+      </h2>
+    </div>
 
+    <div className="grid md:grid-cols-2 gap-8">
+      {/* ₹49 Plan */}
+      <div className="bg-slate-50 dark:bg-slate-950 p-8 rounded-3xl border border-slate-200 dark:border-slate-800 hover:border-yellow-500 transition-all group">
+        <div className="flex justify-between items-start mb-6">
+          <div>
+            <span className="text-3xl font-black text-slate-900 dark:text-white">₹49</span>
+            <span className="text-slate-500 dark:text-slate-500 text-sm ml-2">/ one‑time</span>
+          </div>
+          <div className="w-12 h-12 bg-yellow-500/10 rounded-xl flex items-center justify-center text-yellow-600">
+            <i className="fa-solid fa-file-pen text-xl"></i>
+          </div>
+        </div>
+        <p className="text-lg font-bold text-slate-900 dark:text-white mb-4">Resume + Cover Letter + 20+ Employer List</p>
+        <ul className="space-y-4 mb-8">
+          <li className="flex items-start gap-3">
+            <i className="fa-solid fa-check-circle text-yellow-500 mt-1"></i>
+            <span className="text-slate-600 dark:text-slate-400"><strong>Custom‑built resume</strong> – tailored to your qualifications, experience, and target role</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <i className="fa-solid fa-check-circle text-yellow-500 mt-1"></i>
+            <span className="text-slate-600 dark:text-slate-400"><strong>Professional cover letter</strong> – written to match your resume and the jobs you want</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <i className="fa-solid fa-check-circle text-yellow-500 mt-1"></i>
+            <span className="text-slate-600 dark:text-slate-400"><strong>20+ targeted companies & job providers</strong> – hand‑picked based on your location, industry, and qualifications</span>
+          </li>
+        </ul>
+        <Link
+          to="/pay?plan=49"
+          className="block w-full bg-yellow-500 text-slate-900 py-4 rounded-xl font-black text-center hover:bg-yellow-400 transition-all"
+        >
+          Choose ₹49 Plan
+        </Link>
+      </div>
+
+      {/* ₹99 Plan (Most Popular) */}
+      <div className="bg-slate-50 dark:bg-slate-950 p-8 rounded-3xl border-2 border-yellow-500 relative group">
+        <div className="absolute -top-4 right-8 bg-yellow-500 text-slate-900 px-6 py-1 rounded-full font-black text-sm uppercase tracking-wider">
+          Most Popular
+        </div>
+        <div className="flex justify-between items-start mb-6">
+          <div>
+            <span className="text-3xl font-black text-slate-900 dark:text-white">₹99</span>
+            <span className="text-slate-500 dark:text-slate-500 text-sm ml-2">/ one‑time</span>
+          </div>
+          <div className="w-12 h-12 bg-yellow-500/10 rounded-xl flex items-center justify-center text-yellow-600">
+            <i className="fa-solid fa-chart-line text-xl"></i>
+          </div>
+        </div>
+        <p className="text-lg font-bold text-slate-900 dark:text-white mb-4">Everything in ₹49 + Job Alerts & HR Contacts</p>
+        <ul className="space-y-4 mb-8">
+          <li className="flex items-start gap-3">
+            <i className="fa-solid fa-check-circle text-yellow-500 mt-1"></i>
+            <span className="text-slate-600 dark:text-slate-400"><strong>All features of the ₹49 plan</strong> – custom resume, cover letter, 20+ employer list</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <i className="fa-solid fa-check-circle text-yellow-500 mt-1"></i>
+            <span className="text-slate-600 dark:text-slate-400"><strong>Daily job updates</strong> – we scrape top job boards and send you fresh opportunities matching your profile</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <i className="fa-solid fa-check-circle text-yellow-500 mt-1"></i>
+            <span className="text-slate-600 dark:text-slate-400"><strong>HR manager contacts</strong> – get direct access to recruiters and decision‑makers in your industry</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <i className="fa-solid fa-check-circle text-yellow-500 mt-1"></i>
+            <span className="text-slate-600 dark:text-slate-400"><strong>Priority support</strong> – we help you with follow‑ups and interview prep</span>
+          </li>
+        </ul>
+        <Link
+          to="/pay?plan=99"
+          className="block w-full bg-yellow-500 text-slate-900 py-4 rounded-xl font-black text-center hover:bg-yellow-400 transition-all"
+        >
+          Choose ₹99 Plan
+        </Link>
+      </div>
+    </div>
+
+    {/* Optional trust badge */}
+    <p className="text-center text-slate-500 dark:text-slate-400 text-sm mt-8">
+      🔒 Secure one‑time payment • No recurring fees • Instant access
+    </p>
+  </div>
+</section>
   // Simulate Toast Notification for Job Alerts
   useEffect(() => {
     const timer = setTimeout(() => {
