@@ -12,11 +12,14 @@
     "preview": "vite preview",
     "postinstall": "chmod +x node_modules/.bin/vite"
   },
+<<<<<<< HEAD
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^7.13.1"
   },
+=======
+>>>>>>> e2d656a (move Jobs.tsx to pages folder)
   "devDependencies": {
     "@tailwindcss/postcss": "^4.2.1",
     "@vitejs/plugin-react": "^5.1.4",
@@ -24,5 +27,8 @@
     "postcss": "^8.5.8",
     "tailwindcss": "^4.2.1",
     "vite": "^7.3.1"
+  },
+  "dependencies": {
+    "react-router-dom": "^7.13.1"
   }
 }
