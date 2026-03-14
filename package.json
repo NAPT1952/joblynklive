@@ -1,5 +1,4 @@
-@'
-{
+﻿{
   "name": "jobylive",
   "version": "1.0.0",
   "private": true,
@@ -19,4 +18,3 @@
     "vite": "^5.0.0"
   }
 }
-'@ | Set-Content -Path package.json -Encoding UTF8
