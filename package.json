@@ -14,11 +14,10 @@
     "react-router-dom": "^6.30.0"
   },
   "devDependencies": {
-<<<<<<< HEAD
     "@tailwindcss/postcss": "^4.2.1",
-=======
+
     "@tailwindcss/postcss": "^4.0.0",
->>>>>>> 34e0d56a3e096f634f9de6d7e2d36c1fa72e854f
+ 34e0d56a3e096f634f9de6d7e2d36c1fa72e854f
     "@vitejs/plugin-react": "^4.0.0",
     "autoprefixer": "^10.4.27",
     "tailwindcss": "^4.2.1",
