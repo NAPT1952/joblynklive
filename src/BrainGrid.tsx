@@ -1,14 +1,9 @@
-<<<<<<< HEAD
 ﻿import React from 'react';
-=======
-import React from 'react';
->>>>>>> 750c386bfca8a968ade083f280da71221d374e7e
 import { Link } from 'react-router-dom';
 import './BrainGrid.css';
 
 const pages = [
   { name: 'Home', path: '/' },
-<<<<<<< HEAD
   { name: 'About', path: '/about' },
   { name: 'Pricing', path: '/pricing' },
   { name: 'Pay Portal', path: '/payportal' },
@@ -16,25 +11,12 @@ const pages = [
   { name: 'Employers Data', path: '/employersdata' },
   { name: 'Sign Up', path: '/signup' },
   { name: 'Support', path: '/support' },
-=======
-  { name: 'Jobs', path: '/jobs' },
-  { name: 'About', path: '/about' },
-  { name: 'Services', path: '/services' },
-  { name: 'Blog', path: '/blog' },
-  { name: 'Contact', path: '/contact' },
-  { name: 'Portfolio', path: '/portfolio' },
-  { name: 'Team', path: '/team' },
->>>>>>> 750c386bfca8a968ade083f280da71221d374e7e
   { name: 'Disclaimer', path: '/disclaimer' },
 ];
 
 const BrainGrid: React.FC = () => {
   return (
     <div className="brain-grid-container">
-<<<<<<< HEAD
-=======
-      <h1>Explore Our Platform</h1>
->>>>>>> 750c386bfca8a968ade083f280da71221d374e7e
       <div className="brain-grid">
         {pages.map((page) => (
           <Link to={page.path} key={page.name} className="brain-card">
