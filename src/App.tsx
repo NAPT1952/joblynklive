@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import BrainGrid from './BrainGrid';  // Changed from BrainChain
+import BrainGrid from './BrainGrid';
 import Home from './pages/Home';
 import About from './pages/About';
 import Pricing from './pages/Pricing';
@@ -11,13 +11,15 @@ import Support from './pages/Support';
 import Disclaimer from './pages/Disclaimer';
 
 function App() {
+  console.log('🚀 App is rendering');
+  
   return (
     <Router>
       <div style={{ display: 'flex' }}>
-        <BrainGrid />  {/* This will now show your brain images */}
+        <BrainGrid />
         <div style={{ 
-          marginLeft: '120px',  // Match the width of BrainGrid
-          flex: 1,
+          marginLeft: '150px', 
+          width: 'calc(100% - 150px)',
           padding: '20px'
         }}>
           <Routes>
