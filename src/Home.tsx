@@ -1,148 +1,133 @@
-$workingHome = @'
+$correctHome = @'
 import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Home: React.FC = () => {
   return (
     <div style={{ marginLeft: '180px' }}>
-      {/* HERO BANNER */}
+      {/* BANNER with aibm background */}
       <div style={{
         height: '100vh',
-        background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)',
+        backgroundImage: 'url(/images/aibm.jpg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
         position: 'relative',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-between',
         alignItems: 'center',
-        padding: '40px 0',
         color: 'white'
       }}>
-        {/* Decorative elements */}
+        {/* Dark overlay for text visibility */}
         <div style={{
           position: 'absolute',
           top: 0,
           left: 0,
           right: 0,
           bottom: 0,
-          background: 'radial-gradient(circle at 20% 50%, rgba(255,193,7,0.1) 0%, transparent 50%)',
-          pointerEvents: 'none'
+          backgroundColor: 'rgba(0,0,0,0.5)',
+          zIndex: 1
         }}></div>
 
-        {/* TOP TEXT */}
-        <div style={{ textAlign: 'center', zIndex: 2 }}>
-          <h1 style={{
-            fontSize: '64px',
-            fontWeight: '800',
-            marginBottom: '10px',
-            textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
+        {/* TOP - Welcome Text */}
+        <div style={{ 
+          position: 'relative', 
+          zIndex: 2, 
+          textAlign: 'center', 
+          marginTop: '60px' 
+        }}>
+          <h1 style={{ 
+            fontSize: '64px', 
+            fontWeight: 'bold',
+            margin: 0,
+            textShadow: '2px 2px 4px rgba(0,0,0,0.5)'
           }}>
             Welcome to <span style={{ color: '#ffc107' }}>JobLynk</span>
           </h1>
-          <p style={{
-            fontSize: '24px',
-            color: '#cbd5e1'
+          <p style={{ 
+            fontSize: '24px', 
+            marginTop: '10px',
+            opacity: 0.9
           }}>
             Connect with India's Top Employers
           </p>
         </div>
 
-        {/* BRAIN SECTION */}
-        <div style={{
-          display: 'flex',
-          flexDirection: 'column',
+        {/* BOTTOM - Brain Image and Buttons */}
+        <div style={{ 
+          position: 'relative', 
+          zIndex: 2, 
+          display: 'flex', 
+          flexDirection: 'column', 
           alignItems: 'center',
-          gap: '20px',
-          marginBottom: '40px',
-          zIndex: 2
+          gap: '30px',
+          marginBottom: '80px'
         }}>
-          {/* Brain emoji (temporary until brain.jpg works) */}
+          
+          {/* BRAIN.JPG */}
           <div style={{
             width: '120px',
             height: '120px',
-            backgroundColor: '#ffc107',
             borderRadius: '20px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            fontSize: '60px',
-            border: '4px solid white',
+            border: '4px solid #ffc107',
+            overflow: 'hidden',
             boxShadow: '0 0 30px rgba(255,193,7,0.5)',
-            transform: 'scale(1)',
-            transition: 'transform 0.3s',
-            cursor: 'pointer'
-          }}
-          onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.1)'}
-          onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
-          >
-            🧠
+            backgroundColor: '#fff'
+          }}>
+            <img 
+              src="/images/brain.jpg"
+              alt="Brain"
+              style={{
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover'
+              }}
+              onError={(e) => {
+                e.currentTarget.style.display = 'none';
+                e.currentTarget.parentElement!.innerHTML = '<div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:60px;background:#ffc107;">🧠</div>';
+              }}
+            />
           </div>
-          <p style={{ color: '#ffc107', fontSize: '14px' }}>Powered by AI</p>
+
+          {/* BUTTONS */}
+          <div style={{ display: 'flex', gap: '20px' }}>
+            <Link to="/pay" style={{
+              backgroundColor: '#ffc107',
+              color: '#000',
+              padding: '12px 30px',
+              borderRadius: '30px',
+              textDecoration: 'none',
+              fontWeight: 'bold',
+              fontSize: '16px',
+              border: '2px solid #ffc107'
+            }}>
+              Get Started
+            </Link>
+            <Link to="/builder" style={{
+              backgroundColor: 'transparent',
+              color: '#fff',
+              padding: '12px 30px',
+              borderRadius: '30px',
+              textDecoration: 'none',
+              fontWeight: 'bold',
+              fontSize: '16px',
+              border: '2px solid #ffc107'
+            }}>
+              Build Resume
+            </Link>
+          </div>
         </div>
 
-        {/* BUTTONS */}
-        <div style={{
-          display: 'flex',
-          gap: '20px',
-          zIndex: 2
-        }}>
-          <Link to="/pay" style={{
-            backgroundColor: '#ffc107',
-            color: '#0f172a',
-            padding: '15px 40px',
-            borderRadius: '50px',
-            textDecoration: 'none',
-            fontWeight: 'bold',
-            fontSize: '18px',
-            border: '2px solid #ffc107',
-            transition: 'all 0.3s',
-            cursor: 'pointer'
-          }}
-          onMouseOver={(e) => {
-            e.currentTarget.style.backgroundColor = 'white';
-            e.currentTarget.style.borderColor = 'white';
-          }}
-          onMouseOut={(e) => {
-            e.currentTarget.style.backgroundColor = '#ffc107';
-            e.currentTarget.style.borderColor = '#ffc107';
-          }}>
-            Get Started
-          </Link>
-          
-          <Link to="/builder" style={{
-            backgroundColor: 'transparent',
-            color: 'white',
-            padding: '15px 40px',
-            borderRadius: '50px',
-            textDecoration: 'none',
-            fontWeight: 'bold',
-            fontSize: '18px',
-            border: '2px solid #ffc107',
-            transition: 'all 0.3s',
-            cursor: 'pointer'
-          }}
-          onMouseOver={(e) => {
-            e.currentTarget.style.backgroundColor = '#ffc107';
-            e.currentTarget.style.color = '#0f172a';
-          }}
-          onMouseOut={(e) => {
-            e.currentTarget.style.backgroundColor = 'transparent';
-            e.currentTarget.style.color = 'white';
-          }}>
-            Build Resume
-          </Link>
-        </div>
-
-        {/* AI/BM Indicators */}
+        {/* AI/BM at bottom right */}
         <div style={{
           position: 'absolute',
           bottom: '20px',
           right: '20px',
+          zIndex: 2,
           display: 'flex',
           gap: '15px',
           color: '#ffc107',
-          fontWeight: 'bold',
-          fontSize: '16px',
-          zIndex: 2
+          fontWeight: 'bold'
         }}>
           <span>AI</span>
           <span>BM</span>
@@ -156,7 +141,5 @@ export default Home;
 '@
 
 # Save the file
-$workingHome | Set-Content "src\pages\Home.tsx" -Force
-
-Write-Host "✅ Home.tsx completely replaced with WORKING banner!" -ForegroundColor Green
-Write-Host "🚀 Refresh your browser - you should NOW see a beautiful banner!" -ForegroundColor Yellow
+$correctHome | Set-Content "src\pages\Home.tsx" -Force
+Write-Host "✅ Home.tsx updated with CORRECT banner structure!" -ForegroundColor Green
