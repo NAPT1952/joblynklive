@@ -1,7 +1,7 @@
 ﻿import React from 'react';
 import { Link } from 'react-router-dom';
 import './BrainGrid.css';
-
+import './BrainChain.css';
 const pages = [
   { name: 'Home', path: '/' },
   { name: 'About', path: '/about' },
