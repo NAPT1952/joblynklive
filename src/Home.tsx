@@ -57,6 +57,55 @@ const Home: React.FC<{ addToast?: (msg: string, type?: 'info' | 'success') => vo
             src="/public/images/brain.jpg" 
             alt={`Brain frame ${index + 1}`}
             className="w-full h-full object-cover"
+            <section className="text-white py-24 px-6 relative overflow-hidden transition-colors duration-300">
+  {/* Dark overlay */}
+  <div className="absolute inset-0 bg-black/50"></div>
+  
+  <div className="max-w-6xl mx-auto relative z-10">
+    {/* 9 Brain Images Grid - THIS IS LINES 38-59 */}
+    <div className="grid grid-cols-3 md:grid-cols-9 gap-2 md:gap-4 mb-12">
+      {[...Array(9)].map((_, index) => (
+        <div key={index} className="aspect-square rounded-lg overflow-hidden shadow-lg border-2 border-yellow-500/30 hover:border-yellow-500 transition-all transform hover:scale-105">
+          <img 
+            src="/public/images/brain.jpg" 
+            alt={`Brain frame ${index + 1}`}
+            className="w-full h-full object-cover"
+          />
+        </div>
+      ))}
+    </div>  {/* ← Grid closes here (line 59) */}
+
+    {/* REST OF HERO CONTENT - Place AFTER line 59, BEFORE closing section */}
+    <div className="flex flex-col lg:flex-row items-center gap-12">
+      <div className="flex-1 text-center lg:text-left">
+        <h2 className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight tracking-tight">
+          Connect with India's <span className="text-yellow-500">Top Employers</span>
+        </h2>
+        <p className="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl leading-relaxed font-light">
+          Elevate your career with Joblynk.live. We provide professional resumes and verified data to get you hired by the best brands in India.
+        </p>
+        <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-5">
+          <Link to="/pay" className="bg-yellow-500 text-slate-900 px-10 py-4 rounded-xl font-black text-lg hover:bg-yellow-400 transition-all transform hover:-translate-y-1 shadow-[0_10px_30px_-10px_rgba(245,158,11,0.5)]">
+            Get Started
+          </Link>
+          <Link to="/builder" className="border-2 border-yellow-500 text-yellow-500 px-10 py-4 rounded-xl font-bold text-lg hover:bg-yellow-500 hover:text-slate-900 transition-all transform hover:-translate-y-1">
+            Build Resume
+          </Link>
+        </div>
+      </div>
+      
+      {/* Optional professional photo */}
+      <div className="flex-1 relative hidden lg:block">
+        <div className="absolute -inset-4 bg-yellow-500/10 blur-3xl rounded-full"></div>
+        <img 
+          src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=1000&auto=format&fit=crop" 
+          alt="Indian Professional" 
+          className="w-full max-w-md mx-auto rounded-[3rem] shadow-2xl relative z-10 border-4 border-slate-800"
+        />
+      </div>
+    </div>
+  </div>  {/* ← Closes max-w-6xl div */}
+</section>  {/* ← Closes section */}
           /><section className="text-white py-24 px-6 relative overflow-hidden transition-colors duration-300">
   {/* Dark overlay */}
   <div className="absolute inset-0 bg-black/50"></div>
