@@ -26,12 +26,9 @@ const About = () => {
 
       <p style={{ fontSize: "1.1rem", lineHeight: "1.7", marginBottom: "30px" }}>
         We started in 2024 with a clear mission: make job application tools
-        affordable (₹49/₹99) and brutally simple. No confusing dashboards. No
-        hidden fees. Just your resume, cover letter, and a direct line to
-        employers who are actually hiring.
+        affordable (₹49/₹99) and simple. No confusing dashboards. No hidden fees.
       </p>
 
-      {/* Stats */}
       <div style={{ display: "flex", gap: "40px", marginBottom: "40px" }}>
         <div>
           <h2 style={{ color: "#2563eb" }}>500+</h2>
@@ -43,26 +40,22 @@ const About = () => {
         </div>
       </div>
 
-      {/* Promise */}
       <h2 style={{ marginBottom: "20px" }}>🎯 Our Promise</h2>
       <ul style={{ lineHeight: "2" }}>
-        <li>No monthly fees – Pay once, lifetime access</li>
-        <li>Real human support – Fast response</li>
-        <li>Privacy first – Your data is secure</li>
+        <li>No monthly fees – Pay once</li>
+        <li>Real human support</li>
+        <li>Privacy first</li>
       </ul>
 
-      {/* Team */}
       <h2 style={{ marginTop: "40px" }}>Meet the Team</h2>
       <ul style={{ lineHeight: "2" }}>
-        <li>Vikram Khanna – Founder</li>
-        <li>Neha Patel – Head of Operations</li>
-        <li>Abdul Rahman – Tech Lead</li>
+        <li>Nigel A Thomas – Head of Operations</li>
+        <li>Das Sbbraj – Tech Lead</li>
       </ul>
 
-      {/* Contact */}
       <div style={{ marginTop: "40px" }}>
-        <h3>📞 We're Here to Help</h3>
-        <p>tech-support@joblynk.live</p>
+        <h3>📞 Contact</h3>
+        <p>joblynklive@gmail.com</p>
       </div>
     </div>
   );
