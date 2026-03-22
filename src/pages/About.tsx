@@ -19,44 +19,19 @@ const About = () => {
       </h2>
 
       <p style={{ fontSize: "1.1rem", lineHeight: "1.7", marginBottom: "20px" }}>
-        JobLynk.live was born from a simple observation: millions of skilled
-        Indian workers—from factory floors to home offices—struggle to present
-        themselves professionally to employers.
+        JobLynk.live helps job seekers present themselves professionally and connect with real employers.
       </p>
 
       <p style={{ fontSize: "1.1rem", lineHeight: "1.7", marginBottom: "30px" }}>
-        We started in 2024 with a clear mission: make job application tools
-        affordable (₹49/₹99) and simple. No confusing dashboards. No hidden fees.
+        Simple tools. Affordable pricing. Real opportunities.
       </p>
 
-      <div style={{ display: "flex", gap: "40px", marginBottom: "40px" }}>
-        <div>
-          <h2 style={{ color: "#2563eb" }}>500+</h2>
-          <p>Job Seekers Placed</p>
-        </div>
-        <div>
-          <h2 style={{ color: "#2563eb" }}>200+</h2>
-          <p>Verified Employers</p>
-        </div>
-      </div>
-
-      <h2 style={{ marginBottom: "20px" }}>🎯 Our Promise</h2>
-      <ul style={{ lineHeight: "2" }}>
-        <li>No monthly fees – Pay once</li>
-        <li>Real human support</li>
-        <li>Privacy first</li>
+      <h2>🎯 Our Promise</h2>
+      <ul>
+        <li>No monthly fees</li>
+        <li>Fast support</li>
+        <li>Secure data</li>
       </ul>
-
-      <h2 style={{ marginTop: "40px" }}>Meet the Team</h2>
-      <ul style={{ lineHeight: "2" }}>
-        <li>Nigel A Thomas – Head of Operations</li>
-        <li>Das Sbbraj – Tech Lead</li>
-      </ul>
-
-      <div style={{ marginTop: "40px" }}>
-        <h3>📞 Contact</h3>
-        <p>joblynklive@gmail.com</p>
-      </div>
     </div>
   );
 };
