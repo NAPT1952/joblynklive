@@ -54,15 +54,14 @@ const About = () => {
       {/* Team */}
       <h2 style={{ marginTop: "40px" }}>Meet the Team</h2>
       <ul style={{ lineHeight: "2" }}>
-        <li>Nigel A Thomas– Founder</li>
         <li>Nigel A Thomas – Head of Operations</li>
-        <li>Das Subbraj – Tech Lead</li>
+        <li>Das Sbbraj – Tech Lead & Support</li>
       </ul>
 
       {/* Contact */}
       <div style={{ marginTop: "40px" }}>
         <h3>📞 We're Here to Help</h3>
-        <p>tech-joblynklive@gmail.com</p>
+        <p>joblynklive@gmail.com</p>
       </div>
     </div>
   );
