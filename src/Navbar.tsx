@@ -6,18 +6,15 @@ interface NavbarProps {
   isDarkMode: boolean;
   toggleDarkMode: () => void;
 }
-
-const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleDarkMode }) => {
-  const pages = [
-    { name: "Home", path: "/", description: "Landing page overview" },
-    { name: "About", path: "/about", description: "About us and mission" },
-    { name: "Jobs", path: "/jobs", description: "Available job listings" },
-    { name: "Contact", path: "/contact", description: "Reach out to us" },
-    { name: "Pricing", path: "/pricing", description: "Our service plans" },
-    { name: "Resume Builder", path: "/resumebuilder", description: "Create resumes easily" },
-    { name: "Samples Vault", path: "/samplesvault", description: "View sample resumes" },
-    { name: "Employer Portal", path: "/employerportal", description: "For employers" },
-    { name: "Pay Portal", path: "/payportal", description: "Payments and subscriptions" },
+const pages = [
+  { name: "Home", path: "/", description: "Landing page overview" },
+  { name: "Pay Portal", path: "/pay", description: "Payments and subscriptions" },
+  { name: "Disclaimer", path: "/disclaimer", description: "Terms and conditions" },
+  { name: "Samples Vault", path: "/samples", description: "View sample resumes" },
+  { name: "Employer Portal", path: "/employer", description: "For employers" },
+  { name: "Resume Builder", path: "/builder", description: "Create resumes easily" },
+  { name: "Admin", path: "/admin", description: "Admin dashboard" },
+];
   ];
 
   return (
