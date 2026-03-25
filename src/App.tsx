@@ -6,8 +6,8 @@ import Chatbot from "./components/Chatbot";
 import Toast from "./components/Toast";
 
 import Home from "./pages/Home";
-import PayPortal from "./pages/payportal";
-import Disclaimer from "./pages/disclaimer";
+import PayPortal from "./pages/Payportal";
+import Disclaimer from "./pages/Disclaimer";
 
 function App() {
   return (
