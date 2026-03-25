@@ -9,10 +9,6 @@ import Home from "./pages/Home";
 import PayPortal from "./pages/PayPortal";
 import Disclaimer from "./pages/Disclaimer";
 
-import SamplesVault from "./pages/SamplesVault";
-import EmployerPortal from "./pages/EmployerPortal";
-import ResumeBuilder from "./pages/ResumeBuilder";
-
 function App() {
   return (
     <Router>
