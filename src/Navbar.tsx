@@ -6,15 +6,16 @@ interface NavbarProps {
   isDarkMode: boolean;
   toggleDarkMode: () => void;
 }
-const pages = [
-  { name: "Home", path: "/", description: "Landing page overview" },
-  { name: "Pay Portal", path: "/pay", description: "Payments and subscriptions" },
-  { name: "Disclaimer", path: "/disclaimer", description: "Terms and conditions" },
-  { name: "Samples Vault", path: "/samples", description: "View sample resumes" },
-  { name: "Employer Portal", path: "/employer", description: "For employers" },
-  { name: "Resume Builder", path: "/builder", description: "Create resumes easily" },
-  { name: "Admin", path: "/admin", description: "Admin dashboard" },
-];
+
+const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleDarkMode }) => {
+  const pages = [
+    { name: "Home", path: "/", description: "Landing page overview" },
+    { name: "Pay Portal", path: "/pay", description: "Payments and subscriptions" },
+    { name: "Disclaimer", path: "/disclaimer", description: "Terms and conditions" },
+    { name: "Samples Vault", path: "/samples", description: "View sample resumes" },
+    { name: "Employer Portal", path: "/employer", description: "For employers" },
+    { name: "Resume Builder", path: "/builder", description: "Create resumes easily" },
+    { name: "Admin", path: "/admin", description: "Admin dashboard" },
   ];
 
   return (
@@ -25,7 +26,7 @@ const pages = [
         <span className="font-bold text-xl">NigelThomas</span>
       </div>
 
-      {/* 9 Button Frames */}
+      {/* Navigation buttons */}
       <div className="flex gap-3">
         {pages.map((page) => (
           <Link
