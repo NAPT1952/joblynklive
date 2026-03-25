@@ -1,28 +1,29 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import Chatbot from './components/Chatbot';
-import Home from './pages/Home';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Chatbot from "./components/Chatbot";
+import Toast from "./components/Toast";
+
+import Home from "./pages/Home";
+import PayPortal from "./pages/payportal";
+import Disclaimer from "./pages/disclaimer";
 
 function App() {
   return (
     <Router>
-      <div className="min-h-screen flex flex-row">
-        {/* Main Content Area */}
-        <div className="flex-1 flex flex-col">
-          <Navbar />
-          
-          <main className="flex-grow">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              {/* You can add more routes here later, like /jobs */}
-            </Routes>
-          </main>
+      <div className="flex flex-col min-h-screen">
+        <Navbar />
 
-          <Footer />
-        </div>
+        <main className="flex-grow">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/pay" element={<PayPortal />} />
+            <Route path="/disclaimer" element={<Disclaimer />} />
+          </Routes>
+        </main>
 
-        {/* Floating Components */}
+        <Footer />
         <Chatbot />
       </div>
     </Router>
