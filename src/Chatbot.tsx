@@ -5,15 +5,12 @@ const Chatbot: React.FC = () => {
 
   return (
     <div className="fixed bottom-6 right-6 z-50">
-      {/* Floating Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="bg-yellow-500 text-slate-900 p-4 rounded-full shadow-lg hover:scale-105 transition"
       >
         💬
       </button>
-
-      {/* Chat Window */}
       {isOpen && (
         <div className="absolute bottom-16 right-0 w-80 bg-white rounded-xl shadow-2xl border border-slate-200 overflow-hidden">
           <div className="bg-slate-900 text-white p-4">
@@ -38,7 +35,7 @@ const Chatbot: React.FC = () => {
                 src="https://your-gemini-chatbot-url.com"
                 className="w-full h-48 rounded border"
                 title="Gemini AI Assistant"
-              ></iframe>
+              />
             </div>
           </div>
         </div>
