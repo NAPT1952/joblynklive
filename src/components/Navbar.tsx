@@ -12,7 +12,9 @@ const Navbar = () => {
     { name: "Samples Vault", path: "/samplesvault", desc: "View resume samples" },
     { name: "Employer Portal", path: "/employerportal", desc: "Recruiter access" },
     { name: "Pay Portal", path: "/payportal", desc: "Payments & billing" },
-    { name: "Contact", path: "/contact", desc: "Reach our team" }
+    { name: "Contact", path: "/contact", desc: "Reach our team" },
+    { name: "Disclaimer", path: "/disclaimer", desc: "Legal information" },
+    { name: "Support", path: "/support", desc: "Get help & contact" }
   ];
 
   return (
