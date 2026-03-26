@@ -1,11 +1,8 @@
 import React from 'react';
-// Import your image from the assets folder
-import interviewImage from '../assets/interview2.jpg';
 
 const About: React.FC = () => {
   return (
     <div className="bg-slate-50 text-slate-800">
-      {/* Hero Section */}
       <section className="bg-slate-900 text-white py-16 px-6 text-center">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">About Joblynk.live</h1>
@@ -15,9 +12,8 @@ const About: React.FC = () => {
         </div>
       </section>
 
-      {/* Main Content */}
       <div className="max-w-6xl mx-auto py-16 px-6">
-        {/* About Us – without image (or add a different image if you have) */}
+        {/* About Us */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold mb-6 text-slate-900">About Us</h2>
           <p className="text-lg leading-relaxed text-slate-700 mb-4">
@@ -31,7 +27,7 @@ const About: React.FC = () => {
           </p>
         </div>
 
-        {/* How It Works (3-Step Process) */}
+        {/* How It Works */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold mb-6 text-slate-900">How It Works</h2>
           <div className="grid md:grid-cols-3 gap-8">
@@ -64,7 +60,7 @@ const About: React.FC = () => {
           </ul>
         </div>
 
-        {/* Success Stories & Verified Employers */}
+        {/* Success Stories */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold mb-6 text-slate-900">Success Stories</h2>
           <div className="grid md:grid-cols-3 gap-6 mb-8">
@@ -96,10 +92,10 @@ const About: React.FC = () => {
           </p>
         </div>
 
-        {/* Your Image at the Bottom */}
+        {/* Image at the bottom */}
         <div className="mt-12 text-center">
           <img
-            src={interviewImage}
+            src="/interview2.jpg"
             alt="Indian executive interviewing candidate in a 5-star office"
             className="mx-auto rounded-lg shadow-xl max-w-full h-auto object-cover max-h-96 w-auto"
           />
