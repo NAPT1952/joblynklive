@@ -1,8 +1,10 @@
 import React from 'react';
+import interviewImage from '../assets/interview2.jpg';
 
 const About: React.FC = () => {
   return (
     <div className="bg-slate-50 text-slate-800">
+      {/* Hero Section */}
       <section className="bg-slate-900 text-white py-16 px-6 text-center">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">About Joblynk.live</h1>
@@ -95,7 +97,7 @@ const About: React.FC = () => {
         {/* Image at the bottom */}
         <div className="mt-12 text-center">
           <img
-            src="/interview2.jpg"
+            src={interviewImage}
             alt="Indian executive interviewing candidate"
             className="mx-auto rounded-lg shadow-xl max-w-full h-auto object-cover max-h-96 w-auto"
           />
