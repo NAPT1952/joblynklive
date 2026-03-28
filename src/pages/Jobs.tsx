@@ -12,10 +12,35 @@ const jobs = [
 const Jobs = () => {
   const [selected, setSelected] = useState<typeof jobs[0] | null>(null);
   const [applied, setApplied] = useState(false);
+  const [sending, setSending] = useState(false);
   const [form, setForm] = useState({ name: '', email: '', phone: '' });
 
   const handle = (e: React.ChangeEvent<HTMLInputElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleApply = async () => {
+    setSending(true);
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          access_key: '3999d2fe-b27f-400a-b1aa-4e33cb921caf',
+          subject: `New Job Application - ${selected?.title}`,
+          name: form.name,
+          email: form.email,
+          phone: form.phone,
+          job_title: selected?.title,
+          company: selected?.company,
+          message: `New application for ${selected?.title} at ${selected?.company}`
+        })
+      });
+      if (response.ok) setApplied(true);
+    } catch (err) {
+      alert('Error sending. Please try again.');
+    }
+    setSending(false);
   };
 
   return (
@@ -25,7 +50,8 @@ const Jobs = () => {
         <p style={{ color: '#64748b', fontSize: '1.1rem', marginBottom: '40px', textAlign: 'center' }}>Click any job to view details and apply.</p>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
           {jobs.map((job, i) => (
-            <div key={i} onClick={() => { setSelected(job); setApplied(false); }} style={{ background: '#ffffff', borderRadius: '12px', padding: '24px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)', border: '1px solid #e2e8f0', cursor: 'pointer', transition: 'all 0.2s' }}
+            <div key={i} onClick={() => { setSelected(job); setApplied(false); setForm({ name: '', email: '', phone: '' }); }}
+              style={{ background: '#ffffff', borderRadius: '12px', padding: '24px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)', border: '1px solid #e2e8f0', cursor: 'pointer', transition: 'all 0.2s' }}
               onMouseEnter={(e) => { e.currentTarget.style.boxShadow = '0 8px 24px rgba(0,0,0,0.15)'; e.currentTarget.style.transform = 'translateY(-4px)'; }}
               onMouseLeave={(e) => { e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.08)'; e.currentTarget.style.transform = 'translateY(0)'; }}
             >
@@ -67,7 +93,9 @@ const Jobs = () => {
                 <input name="name" placeholder="Full Name" value={form.name} onChange={handle} style={{ width: '100%', padding: '12px', marginBottom: '12px', borderRadius: '8px', border: '1px solid #e2e8f0', boxSizing: 'border-box' }} />
                 <input name="email" placeholder="Email" value={form.email} onChange={handle} style={{ width: '100%', padding: '12px', marginBottom: '12px', borderRadius: '8px', border: '1px solid #e2e8f0', boxSizing: 'border-box' }} />
                 <input name="phone" placeholder="Phone Number" value={form.phone} onChange={handle} style={{ width: '100%', padding: '12px', marginBottom: '20px', borderRadius: '8px', border: '1px solid #e2e8f0', boxSizing: 'border-box' }} />
-                <button onClick={() => setApplied(true)} style={{ width: '100%', padding: '14px', background: 'linear-gradient(135deg, #b45309, #92400e)', color: 'white', border: 'none', borderRadius: '50px', fontWeight: '600', cursor: 'pointer', fontSize: '1rem' }}>Apply Now</button>
+                <button onClick={handleApply} disabled={sending} style={{ width: '100%', padding: '14px', background: sending ? '#94a3b8' : 'linear-gradient(135deg, #b45309, #92400e)', color: 'white', border: 'none', borderRadius: '50px', fontWeight: '600', cursor: sending ? 'not-allowed' : 'pointer', fontSize: '1rem' }}>
+                  {sending ? 'Sending...' : 'Apply Now'}
+                </button>
               </>
             )}
           </div>
