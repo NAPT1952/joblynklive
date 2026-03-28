@@ -1,59 +1,61 @@
 import React from 'react';
 
-const SamplesVault: React.FC = () => {
+const SamplesVault = () => {
   return (
-    <>
-      {/* SAMPLE RESUME */}
-      <section className="max-w-6xl mx-auto py-16 px-6">
-        <h2 className="text-3xl font-bold mb-6">Sample Resume</h2>
-        <div className="bg-white p-6 rounded shadow-md">
-          <h3 className="text-xl font-semibold">Candidate Name</h3>
-          <p className="mt-2"><strong>Professional Summary:</strong> Experienced hospitality manager with expertise in restaurant service, buffet setups, and event operations.</p>
-          <p className="mt-2"><strong>Key Skills:</strong> Team leadership, cost control, guest service, Excel dashboards.</p>
-          <p className="mt-2"><strong>Experience:</strong> Restaurant Manager, Catering Supervisor, Cruise Hospitality.</p>
-          <p className="mt-2"><strong>Education:</strong> Bachelor’s in Hospitality Management.</p>
-          <p className="mt-2"><strong>Contact Information:</strong> Phone, Email, Location.</p>
-        </div>
-      </section>
+    <div style={{ background: '#f8fafc', minHeight: '100vh', padding: '60px 20px' }}>
+      <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+        <h1 style={{ fontSize: '2.5rem', color: '#0f172a', marginBottom: '10px', textAlign: 'center' }}>Samples Vault</h1>
+        <p style={{ color: '#64748b', textAlign: 'center', marginBottom: '50px' }}>Preview our resume, cover letter and employer data formats.</p>
 
-      {/* SAMPLE COVER LETTER */}
-      <section className="max-w-6xl mx-auto py-16 px-6">
-        <h2 className="text-3xl font-bold mb-6">Sample Cover Letter</h2>
-        <div className="bg-white p-6 rounded shadow-md">
+        <div style={{ background: '#ffffff', borderRadius: '16px', padding: '32px', marginBottom: '30px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)' }}>
+          <h2 style={{ color: '#0f172a', marginBottom: '20px', borderBottom: '2px solid #fbbf24', paddingBottom: '10px' }}>Sample Resume</h2>
+          <p><strong>Candidate Name</strong></p>
+          <p style={{ color: '#64748b', margin: '8px 0' }}>📧 candidate@email.com | 📞 +91 98765 43210 | 📍 Mumbai</p>
+          <p style={{ marginTop: '16px' }}><strong>Professional Summary:</strong> Experienced hospitality manager with expertise in restaurant service, buffet setups, and event operations.</p>
+          <p style={{ marginTop: '12px' }}><strong>Key Skills:</strong> Team leadership, cost control, guest service, Excel dashboards.</p>
+          <p style={{ marginTop: '12px' }}><strong>Experience:</strong> Restaurant Manager at Hotel Sunrise (3 years), Catering Supervisor at EventWorks (2 years).</p>
+          <p style={{ marginTop: '12px' }}><strong>Education:</strong> Bachelor's in Hospitality Management.</p>
+          <p style={{ marginTop: '16px', color: '#94a3b8', fontSize: '0.9rem', fontStyle: 'italic' }}>* Actual resume is delivered in professionally formatted Word/PDF document.</p>
+        </div>
+
+        <div style={{ background: '#ffffff', borderRadius: '16px', padding: '32px', marginBottom: '30px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)' }}>
+          <h2 style={{ color: '#0f172a', marginBottom: '20px', borderBottom: '2px solid #fbbf24', paddingBottom: '10px' }}>Sample Cover Letter</h2>
           <p>Dear Hiring Manager,</p>
-          <p className="mt-2">
-            I am writing to express my interest in the position advertised. With extensive experience in hospitality and event operations, I bring strong leadership, cost control expertise, and guest-focused service. I am confident my skills align with your requirements.
-          </p>
-          <p className="mt-2">Thank you for considering my application.</p>
-          <p className="mt-2">Sincerely,<br />Candidate Name</p>
+          <p style={{ marginTop: '12px', lineHeight: '1.7', color: '#334155' }}>I am writing to express my interest in the position advertised. With extensive experience in hospitality and event operations, I bring strong leadership, cost control expertise, and guest-focused service. I am confident my skills align with your requirements.</p>
+          <p style={{ marginTop: '12px', color: '#334155' }}>Thank you for considering my application.</p>
+          <p style={{ marginTop: '12px' }}>Sincerely,<br /><strong>Candidate Name</strong></p>
         </div>
-      </section>
 
-      {/* EMPLOYER DATA SAMPLE */}
-      <section className="max-w-6xl mx-auto py-16 px-6">
-        <h2 className="text-3xl font-bold mb-6">Employer Data Sample</h2>
-        <div className="overflow-x-auto bg-white p-6 rounded shadow-md">
-          <table className="min-w-full border">
-            <thead>
-              <tr className="bg-slate-200">
-                <th className="border px-4 py-2">Company Name</th>
-                <th className="border px-4 py-2">Industry</th>
-                <th className="border px-4 py-2">City</th>
-                <th className="border px-4 py-2">HR / Recruiter Email</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td className="border px-4 py-2">Hotel Sunrise</td><td className="border px-4 py-2">Hospitality</td><td className="border px-4 py-2">Mumbai</td><td className="border px-4 py-2">hr@hotelsunrise.com</td></tr>
-              <tr><td className="border px-4 py-2">EventWorks</td><td className="border px-4 py-2">Events</td><td className="border px-4 py-2">Delhi</td><td className="border px-4 py-2">careers@eventworks.in</td></tr>
-              <tr><td className="border px-4 py-2">Oceanic Cruises</td><td className="border px-4 py-2">Travel</td><td className="border px-4 py-2">Kochi</td><td className="border px-4 py-2">hr@oceaniccruises.com</td></tr>
-              {/* Add more rows as needed */}
-            </tbody>
-          </table>
-          <p className="mt-4 text-sm text-gray-600">Actual employer data is shared in Excel format after payment.</p>
+        <div style={{ background: '#ffffff', borderRadius: '16px', padding: '32px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)' }}>
+          <h2 style={{ color: '#0f172a', marginBottom: '20px', borderBottom: '2px solid #fbbf24', paddingBottom: '10px' }}>Employer Data Sample</h2>
+          <div style={{ overflowX: 'auto' }}>
+            <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+              <thead>
+                <tr style={{ background: '#0f172a', color: 'white' }}>
+                  <th style={{ padding: '12px', textAlign: 'left' }}>Company</th>
+                  <th style={{ padding: '12px', textAlign: 'left' }}>Industry</th>
+                  <th style={{ padding: '12px', textAlign: 'left' }}>City</th>
+                  <th style={{ padding: '12px', textAlign: 'left' }}>HR Email</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  ['Hotel Sunrise', 'Hospitality', 'Mumbai', 'hr@hotelsunrise.com'],
+                  ['EventWorks', 'Events', 'Delhi', 'careers@eventworks.in'],
+                  ['Oceanic Cruises', 'Travel', 'Kochi', 'hr@oceaniccruises.com'],
+                  ['Grand Plaza', 'Hospitality', 'Bangalore', 'jobs@grandplaza.in'],
+                ].map((row, i) => (
+                  <tr key={i} style={{ background: i % 2 === 0 ? '#f8fafc' : '#ffffff' }}>
+                    {row.map((cell, j) => <td key={j} style={{ padding: '12px', borderBottom: '1px solid #e2e8f0' }}>{cell}</td>)}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p style={{ marginTop: '16px', color: '#94a3b8', fontSize: '0.9rem', fontStyle: 'italic' }}>* Full employer data list with 100+ contacts is shared in Excel format after payment.</p>
         </div>
-      </section>
-    </>
+      </div>
+    </div>
   );
 };
-
 export default SamplesVault;
