@@ -1,15 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import emblem from "../assets/emblem.jpg";
-import Navbar from "./components/Navbar";
 
-interface NavbarProps {
-  isDarkMode: boolean;
-  toggleDarkMode: () => void;
-}
-
-const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleDarkMode }) => {
- const pages = [
+const Navbar: React.FC = () => {
+  const pages = [
     { name: "Home", path: "/", desc: "Main dashboard" },
     { name: "About", path: "/about", desc: "About our platform" },
     { name: "Jobs", path: "/jobs", desc: "Find career opportunities" },
