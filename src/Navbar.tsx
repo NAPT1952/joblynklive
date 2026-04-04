@@ -19,6 +19,8 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleDarkMode }) => {
     { name: "Employer Portal", path: "/employerportal", desc: "Recruiter access" },
     { name: "Pay Portal", path: "/payportal", desc: "Payments & billing" },
     { name: "Contact", path: "/contact", desc: "Reach our team" }
+    { name: "Contact", path: "/contact", desc: "Reach our team" },
+    { name: "Blog", path: "/blog", desc: "Career tips & articles" }
   ];
 
   return (
