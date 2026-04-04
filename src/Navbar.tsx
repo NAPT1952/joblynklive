@@ -9,7 +9,7 @@ interface NavbarProps {
 }
 
 const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleDarkMode }) => {
-  const pages = [
+ const pages = [
     { name: "Home", path: "/", desc: "Main dashboard" },
     { name: "About", path: "/about", desc: "About our platform" },
     { name: "Jobs", path: "/jobs", desc: "Find career opportunities" },
@@ -18,7 +18,6 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleDarkMode }) => {
     { name: "Samples Vault", path: "/samplesvault", desc: "View resume samples" },
     { name: "Employer Portal", path: "/employerportal", desc: "Recruiter access" },
     { name: "Pay Portal", path: "/payportal", desc: "Payments & billing" },
-    { name: "Contact", path: "/contact", desc: "Reach our team" }
     { name: "Contact", path: "/contact", desc: "Reach our team" },
     { name: "Blog", path: "/blog", desc: "Career tips & articles" }
   ];
