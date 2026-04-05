@@ -26,7 +26,11 @@ const posts: BlogPost[] = [
   { id: 9,  cat: 'nontech', emoji: '🎯', title: '25 HR Interview Questions and How to Answer Them',    excerpt: 'The behavioural questions every interviewer asks — and the frameworks that work.',                    author: 'Ananya Desai',  date: 'Mar 10, 2025', readTime: '9 min' },
   { id: 10, cat: 'nontech', emoji: '📣', title: 'How to Break Into Digital Marketing With No Experience', excerpt: 'Free courses, portfolio projects and the job titles to target first.',                            author: 'Rahul Gupta',   date: 'Mar 6, 2025',  readTime: '6 min' },
   { id: 11, cat: 'nontech', emoji: '🤝', title: 'Top Sales Skills Every Employer Looks for in 2025',  excerpt: 'From consultative selling to CRM tools — what separates top performers.',                           author: 'Divya Menon',   date: 'Feb 26, 2025', readTime: '5 min' },
-  { id: 12, cat: 'nontech', emoji: '📋', title: 'How to Move From Operations Into a Management Role',  excerpt: 'The skills and visibility strategies that accelerate your promotion.',                               author: 'Suresh Pillai', date: 'Feb 20, 2025', readTime: '8 min' },
+  { id: 12, cat: 'nontech', emoji: '📋', title: 'How to Move From Operations Into a Management Role',  excerpt: 'The skills and visibility strategies that accelerate your promotion.',
+     { id: 13, cat: 'tech', emoji: '🐍', title: 'Advanced Python: Generators, Decorators & Async', excerpt: 'Master Python features that separate juniors from seniors in real-world projects.', author: 'Rohan Mehta', date: 'Apr 2, 2025', readTime: '10 min' },
+  { id: 14, cat: 'tech', emoji: '☁️', title: 'Cloud Computing Roadmap 2025: AWS vs Azure vs GCP', excerpt: 'Which cloud provider has the most jobs in India? Certification guide included.', author: 'Karan Singh', date: 'Apr 1, 2025', readTime: '12 min' },
+  { id: 15, cat: 'tech', emoji: '🔐', title: 'Cybersecurity Jobs: How to Get Your First SOC Analyst Role', excerpt: 'Certifications, home lab projects, and interview questions that actually get asked.', author: 'Priya Sharma', date: 'Mar 30, 2025', readTime: '9 min' },
+   author: 'Suresh Pillai', date: 'Feb 20, 2025', readTime: '8 min' },
 ];
 
 const Blog: React.FC = () => {
