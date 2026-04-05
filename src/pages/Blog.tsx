@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-
+ 
 type Category = 'tech' | 'nontech' | 'all';
 
 // ─── New articles (enriched) with cat field added ──────────────────────────
