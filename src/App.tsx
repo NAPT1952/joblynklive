@@ -1,24 +1,27 @@
-﻿import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './Navbar';
-import Home from './pages/Home';
-import About from './pages/About';
-import Jobs from './pages/Jobs';
-import Support from './pages/Support';
-import SignUp from './pages/SignUp';
-import Pricing from './pages/Pricing';
-import PayPortal from './pages/PayPortal';
-import ResumeTools from './pages/ResumeTools';
-import Disclaimer from './pages/Disclaimer';
-import EmployersData from './pages/EmployersData';
-import Contact from './Contact';
-import BrainChain from './BrainChain';
-import ResumeBuilder from './resumebuilder';
-import SamplesVault from './samplesvault';
+﻿import { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./Navbar";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Jobs from "./pages/Jobs";
+import Support from "./pages/Support";
+import SignUp from "./pages/SignUp";
+import Pricing from "./pages/Pricing";
+import PayPortal from "./pages/PayPortal";
+import ResumeTools from "./pages/ResumeTools";
+import Disclaimer from "./pages/Disclaimer";
+import EmployersData from "./pages/EmployersData";
+import Contact from "./Contact";
+import BrainChain from "./BrainChain";
+import ResumeBuilder from "./resumebuilder";
+import SamplesVault from "./samplesvault";
 
 function App() {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+  const toggleDarkMode = () => setIsDarkMode(!isDarkMode);
   return (
     <Router>
-      <Navbar />
+      <Navbar isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
