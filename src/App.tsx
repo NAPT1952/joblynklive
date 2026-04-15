@@ -11,10 +11,10 @@ import PayPortal from "./pages/PayPortal";
 import ResumeTools from "./pages/ResumeTools";
 import Disclaimer from "./pages/Disclaimer";
 import EmployersData from "./pages/EmployersData";
-import Contact from "./Contact";
-import BrainChain from "./BrainChain";
-import ResumeBuilder from "./resumebuilder";
-import SamplesVault from "./samplesvault";
+import Contact from './pages/Contact';
+import BrainChain from './pages/BrainChain';
+import ResumeBuilder from './pages/ResumeBuilder';
+import SamplesVault from './pages/SamplesVault';
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
