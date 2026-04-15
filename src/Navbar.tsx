@@ -1,53 +1,46 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import emblem from "/src/assets/emblem.jpg";
-interface NavbarProps {
+import { Link } from "react-router-dom";
+
+interface Props {
   isDarkMode: boolean;
   toggleDarkMode: () => void;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleDarkMode }) => {
-  const pages = [
-    { name: "Home", path: "/", description: "Landing page overview" },
-    { name: "About", path: "/about", description: "About us and mission" },
-    { name: "Jobs", path: "/jobs", description: "Available job listings" },
-    { name: "Contact", path: "/contact", description: "Reach out to us" },
-    { name: "Pricing", path: "/pricing", description: "Our service plans" },
-    { name: "Resume Builder", path: "/resumebuilder", description: "Create resumes easily" },
-    { name: "Samples Vault", path: "/samplesvault", description: "View sample resumes" },
-    { name: "Employer Portal", path: "/employerportal", description: "For employers" },
-    { name: "Pay Portal", path: "/payportal", description: "Payments and subscriptions" },
-  ];
-
+const Navbar: React.FC<Props> = ({ isDarkMode, toggleDarkMode }) => {
   return (
-    <nav className={`navbar ${isDarkMode ? "dark" : "light"} p-4 flex items-center justify-between`}>
-      {/* Emblem on top-left */}
-      <div className="flex items-center gap-2">
-        <img src={emblem} alt="Emblem" className="w-12 h-12 rounded-full" />
-        <span className="font-bold text-xl">NigelThomas</span>
+    <nav style={{
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "center",
+      padding: "15px 40px",
+      background: isDarkMode ? "#0f172a" : "#ffffff",
+      borderBottom: "1px solid #e5e7eb"
+    }}>
+
+      {/* LOGO */}
+      <div style={{ fontWeight: "bold", fontSize: "20px" }}>
+        JobLynk
       </div>
 
-      {/* 9 Button Frames */}
-      <div className="flex gap-3">
-        {pages.map((page) => (
-          <Link
-            key={page.name}
-            to={page.path}
-            title={page.description}
-            className="px-3 py-2 border rounded hover:bg-blue-500 hover:text-white transition"
-          >
-            {page.name}
-          </Link>
-        ))}
+      {/* LINKS */}
+      <div style={{
+        display: "flex",
+        gap: "20px",
+        alignItems: "center"
+      }}>
+        <Link to="/" style={{ textDecoration: "none" }}>Home</Link>
+        <Link to="/jobs" style={{ textDecoration: "none" }}>Jobs</Link>
+        <Link to="/pricing" style={{ textDecoration: "none" }}>Pricing</Link>
+        <Link to="/resumebuilder" style={{ textDecoration: "none" }}>Resume</Link>
+        <Link to="/samplesvault" style={{ textDecoration: "none" }}>Samples</Link>
+        <Link to="/employers" style={{ textDecoration: "none" }}>Employers</Link>
+        <Link to="/contact" style={{ textDecoration: "none" }}>Contact</Link>
       </div>
 
-      {/* Dark mode toggle */}
-      <button
-        onClick={toggleDarkMode}
-        className="ml-4 px-3 py-2 border rounded"
-      >
-        {isDarkMode ? "Light Mode" : "Dark Mode"}
+      {/* DARK MODE */}
+      <button onClick={toggleDarkMode}>
+        {isDarkMode ? "Light" : "Dark"}
       </button>
+
     </nav>
   );
 };
