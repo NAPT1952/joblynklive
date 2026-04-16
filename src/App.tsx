@@ -60,9 +60,9 @@ function App() {
   }, []);
 
   return (
-    <Router>
-      <div className={isDarkMode ? "dark" : "light"}>
-        <Navbar isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
+  return (
+  <Router basename="/joblynklive">
+    <div className={isDarkMode ? "dark" : "light"}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
