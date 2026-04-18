@@ -9,6 +9,7 @@ import Support from "./pages/Support";
 import PayPortal from "./pages/PayPortal";
 import Pricing from "./pages/Pricing";
 import Blog from "./pages/Blog";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import EmployersData from "./pages/EmployersData";
 import ResumeBuilder from "./pages/ResumeBuilder";
 import ResumeTools from "./pages/ResumeTools";
@@ -47,7 +48,7 @@ function App() {
     // Google AdSense
     const script3 = document.createElement("script");
     script3.async = true;
-    script3.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4282121192943910";
+    script3.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3775042360032295";
     script3.crossOrigin = "anonymous";
     document.head.appendChild(script3);
 
@@ -73,6 +74,7 @@ function App() {
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/employers" element={<EmployersData />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/resumebuilder" element={<ResumeBuilder />} />
           <Route path="/resumetools" element={<ResumeTools />} />
           <Route path="/samplesvault" element={<SamplesVault />} />
@@ -81,6 +83,43 @@ function App() {
           <Route path="/terms" element={<Terms />} />
           <Route path="/brainchain" element={<BrainChain />} />
         </Routes>
+
+        {/* Floating WhatsApp Chat Button */}
+        <div style={{
+          position: "fixed",
+          bottom: "20px",
+          right: "20px",
+          zIndex: 1000
+        }}>
+          <a
+            href="https://wa.me/919769351231?text=Hi%21%20I%20have%20a%20question%20about%20JobLynk"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              width: "60px",
+              height: "60px",
+              backgroundColor: "#25D366",
+              borderRadius: "50%",
+              boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+              transition: "transform 0.3s, box-shadow 0.3s",
+              cursor: "pointer",
+              textDecoration: "none"
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = "scale(1.1)";
+              e.currentTarget.style.boxShadow = "0 6px 16px rgba(0,0,0,0.2)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = "scale(1)";
+              e.currentTarget.style.boxShadow = "0 4px 12px rgba(0,0,0,0.15)";
+            }}
+          >
+            <span style={{ fontSize: "28px" }}>💬</span>
+          </a>
+        </div>
       </div>
     </Router>
   );

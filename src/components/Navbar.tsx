@@ -5,15 +5,21 @@ import emblem from "../assets/emblem.jpg";
 const Navbar = () => {
 
 const pages = [
-{ name: "Home", path: "/" , desc:"Main dashboard"},
-{ name: "About", path: "/about", desc:"About our platform"},
-{ name: "Jobs", path: "/jobs", desc:"Find career opportunities"},
-{ name: "Pricing", path: "/pricing", desc:"Subscription plans"},
-{ name: "Resume Builder", path: "/resumebuilder", desc:"Create your CV"},
-{ name: "Samples Vault", path: "/samplesvault", desc:"View resume samples"},
-{ name: "Employer Portal", path: "/employerportal", desc:"Recruiter access"},
-{ name: "Pay Portal", path: "/payportal", desc:"Payments & billing"},
-{ name: "Contact", path: "/contact", desc:"Reach our team"}
+  { name: "Home", path: "/" },
+  { name: "About", path: "/about" },
+  { name: "Jobs", path: "/jobs" },
+  { name: "Contact", path: "/contact" },
+  { name: "Support", path: "/support" },
+  { name: "Pay Portal", path: "/payportal" },
+  { name: "Pricing", path: "/pricing" },
+  { name: "Blog", path: "/blog" },  // <--- ADD THIS LINE
+  { name: "Employer Portal", path: "/employers" },
+  { name: "Resume Maker", path: "/resumebuilder" },
+  { name: "Samples Vault", path: "/samplesvault" },
+  { name: "Sign Up", path: "/signup" },
+  { name: "Disclaimer", path: "/disclaimer" },
+  { name: "Terms", path: "/terms" },
+  { name: "Privacy Policy", path: "/privacy" },
 ];
 
 return (
