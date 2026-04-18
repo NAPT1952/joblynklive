@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from "react";
+﻿import React, { useState, useEffect } from "react"; 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
@@ -61,9 +61,9 @@ function App() {
   }, []);
 
   return (
-    <Router>
-      <div className={isDarkMode ? "dark" : "light"}>
-        <Navbar isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
+  return (
+  <Router basename="/joblynklive">
+    <div className={isDarkMode ? "dark" : "light"}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
