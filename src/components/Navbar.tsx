@@ -1,13 +1,13 @@
-import React from "react";
+﻿import React from "react";
 import { Link } from "react-router-dom";
 import emblem from "../assets/emblem.jpg";
 
 const Navbar = () => {
-
 const pages = [
 { name: "Home", path: "/" , desc:"Main dashboard"},
 { name: "About", path: "/about", desc:"About our platform"},
 { name: "Jobs", path: "/jobs", desc:"Find career opportunities"},
+{ name: "SOP Manual", path: "/hotel-sop-manual.html", desc:"Hotel Standard Operating Procedures"},
 { name: "Pricing", path: "/pricing", desc:"Subscription plans"},
 { name: "Resume Builder", path: "/resumebuilder", desc:"Create your CV"},
 { name: "Samples Vault", path: "/samplesvault", desc:"View resume samples"},
