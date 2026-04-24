@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About JobLynk.live – Bridging Jobs & Talent</title>
-    <meta name="description" content="JobLynk.live helps candidates find executive jobs, provides tailored resume + cover letter services, daily HR leads, and connects employers with pre‑screened talent.">
+    <title>About JobLynk.live – Bridging Executive Talent with Global Careers</title>
+    <meta name="description" content="JobLynk.live connects executive talent with career opportunities in hospitality & maritime across India, Middle East & global markets. Founded by Nigel Thomas, 20+ years experience.">
     <meta name="google-adsense-account" content="ca-pub-4282121192943910">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4282121192943910" crossorigin="anonymous"></script>
     <style>
@@ -16,28 +16,35 @@
         .nav-links{display:flex;gap:1rem;flex-wrap:wrap;}
         .nav-links a{color:white;text-decoration:none;padding:8px 16px;border-radius:8px;transition:background 0.3s;}
         .nav-links a:hover{background:#2c7da0;}
-        .page-header{background:linear-gradient(135deg,#0f2b3d,#1e4a6e);color:white;padding:2rem;text-align:center;}
-        .page-header h1{font-size:2rem;margin-bottom:0.5rem;}
+        .hero{background:linear-gradient(135deg,#0f2b3d,#1e4a6e);color:white;padding:3rem;text-align:center;}
+        .hero h1{font-size:2.5rem;margin-bottom:0.5rem;}
+        .hero p{font-size:1.2rem;opacity:0.9;}
         .container{max-width:1100px;margin:2rem auto;padding:0 20px;}
-        .content-card{background:white;border-radius:24px;padding:2rem;box-shadow:0 8px 30px rgba(0,0,0,0.08);margin-bottom:2rem;}
-        h2{color:#1e4a6e;margin:1rem 0 0.5rem;border-left:4px solid #2c7da0;padding-left:1rem;}
-        .highlight{background:#eef4ff;padding:1.2rem;border-radius:16px;margin:1rem 0;}
-        .packages-container{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;margin:1.5rem 0;}
-        .package-card{background:linear-gradient(135deg,#f8fafc,#ffffff);border-radius:20px;padding:1.8rem;text-align:center;box-shadow:0 4px 15px rgba(0,0,0,0.08);transition:transform 0.3s;border-top:5px solid #2c7da0;}
-        .package-card:hover{transform:translateY(-5px);}
-        .package-card h3{font-size:1.5rem;color:#0f2b3d;margin-bottom:0.5rem;}
-        .package-price{font-size:2.2rem;font-weight:bold;color:#1e4a6e;margin:0.5rem 0;}
-        .package-price span{font-size:1rem;font-weight:normal;color:#666;}
-        .package-features{list-style:none;padding:0;margin:1rem 0;text-align:left;}
-        .package-features li{margin:0.5rem 0;padding-left:1.5rem;position:relative;}
-        .package-features li:before{content:"✓";color:#2c7da0;position:absolute;left:0;font-weight:bold;}
-        .btn-purchase{display:inline-block;background:#2c7da0;color:white;padding:12px 30px;border-radius:40px;text-decoration:none;font-weight:bold;margin-top:1rem;transition:background 0.3s;}
-        .btn-purchase:hover{background:#1e4a6e;}
+        .card{background:white;border-radius:24px;padding:2rem;box-shadow:0 8px 30px rgba(0,0,0,0.08);margin-bottom:2rem;}
+        h2{color:#1e4a6e;margin:0 0 1rem;border-left:4px solid #2c7da0;padding-left:1rem;font-size:1.6rem;}
+        h3{color:#2c5f8a;margin:1rem 0 0.5rem;font-size:1.2rem;}
+        .mission-text{font-size:1.05rem;line-height:1.7;margin-bottom:1rem;}
+        .highlight{background:#eef4ff;padding:1.2rem;border-radius:16px;margin:1rem 0;border-left:4px solid #2c7da0;}
+        .stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin:1.5rem 0;}
+        .stat-card{text-align:center;padding:1rem;background:#f8fafc;border-radius:16px;}
+        .stat-number{font-size:2rem;font-weight:bold;color:#1e4a6e;}
+        .stat-label{color:#666;font-size:0.9rem;}
+        .sectors-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:0.8rem;margin:1rem 0;}
+        .sector-item{background:#eef4ff;padding:0.8rem 1rem;border-radius:12px;font-size:0.95rem;transition:transform 0.2s;}
+        .sector-item:hover{transform:translateX(5px);background:#e0e8f5;}
+        .packages-container{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin:1.5rem 0;}
+        .package-card{background:linear-gradient(135deg,#fff,#f8fafc);border-radius:20px;padding:1.5rem;text-align:center;box-shadow:0 4px 15px rgba(0,0,0,0.08);border-top:4px solid #2c7da0;}
+        .package-card h3{font-size:1.4rem;color:#0f2b3d;margin-bottom:0.5rem;}
+        .price{font-size:2rem;font-weight:bold;color:#1e4a6e;margin:0.5rem 0;}
+        .price span{font-size:1rem;font-weight:normal;}
+        .features{list-style:none;padding:0;margin:1rem 0;text-align:left;}
+        .features li{margin:0.5rem 0;padding-left:1.5rem;position:relative;}
+        .features li:before{content:"✓";color:#2c7da0;position:absolute;left:0;font-weight:bold;}
+        .btn{display:inline-block;background:#2c7da0;color:white;padding:10px 24px;border-radius:30px;text-decoration:none;font-weight:bold;margin-top:0.5rem;}
         .btn-gold{background:#d4a017;}
-        .btn-gold:hover{background:#b8860b;}
         .footer{background:#0f1a24;color:#8899aa;text-align:center;padding:2rem;margin-top:2rem;}
         .footer a{color:#8899aa;margin:0 0.5rem;text-decoration:none;}
-        @media(max-width:768px){.nav-container{flex-direction:column;gap:10px;}}
+        @media(max-width:768px){.nav-container{flex-direction:column;gap:10px;}.hero h1{font-size:1.8rem;}}
     </style>
 </head>
 <body>
@@ -57,87 +64,128 @@
         </div>
     </nav>
 
-    <div class="page-header">
+    <div class="hero">
         <h1>About JobLynk.live</h1>
-        <p>Your Partner in Executive Career Growth & Talent Acquisition</p>
+        <p>Bridging Executive Talent with Global Career Opportunities</p>
     </div>
 
     <div class="container">
-        <div class="content-card">
+        <!-- MISSION SECTION -->
+        <div class="card">
             <h2>🎯 Our Mission</h2>
-            <p>JobLynk.live is a premier digital platform dedicated to bridging the gap between <strong>executive talent</strong> and <strong>career opportunities</strong> in the hospitality and maritime industries across India, the Middle East, and international markets. We believe finding the right job – or the right candidate – should be transparent, efficient, and empowering.</p>
+            <p class="mission-text"><strong>JobLynk.live</strong> is a premier digital platform dedicated to bridging the gap between <strong>executive talent</strong> and <strong>career opportunities</strong> in the <strong>hospitality and maritime industries</strong> across India, the Middle East, and international markets.</p>
+            
+            <p class="mission-text"><strong>Founded by hospitality executive Nigel Thomas</strong>, who brings over 20 years of global leadership experience across luxury resorts, cruise lines, and F&B operations, our mission is to provide Indian professionals with comprehensive career guides, industry insights, salary benchmarks, and direct connections to top employers.</p>
+            
+            <p class="mission-text">We understand the challenges job seekers face – from crafting the perfect resume to finding the right recruiters. That's why we've created a one-stop solution that combines <strong>free career resources</strong> with <strong>affordable paid services</strong> like tailored resume writing, cover letter creation, and daily HR leads delivered directly to your WhatsApp.</p>
+            
+            <div class="highlight">
+                <strong>🌟 Our Promise:</strong> Transparent pricing, no hidden fees, no subscriptions, and real results. Every service is designed to help you land your dream job faster.
+            </div>
         </div>
 
-        <div class="content-card">
+        <!-- FOUNDER SECTION -->
+        <div class="card">
+            <h2>👔 Meet the Founder – Nigel Thomas</h2>
+            <p>Nigel Thomas is an accomplished hospitality executive with over 20 years of progressive leadership experience across luxury resorts, high-volume F&B operations, and international cruise lines spanning India, the Middle East, and the USA.</p>
+            <p>His expertise includes P&L management, cost optimisation, team leadership, and guest experience enhancement. Having helped hundreds of professionals navigate their career paths, Nigel created JobLynk.live to share his insights and provide practical tools for job seekers in the hospitality and maritime industries.</p>
+            <p><a href="https://nigelthomas.live" target="_blank" style="color:#2c7da0;">View Full Profile →</a></p>
+        </div>
+
+        <!-- STATISTICS -->
+        <div class="card">
+            <h2>📊 Our Impact</h2>
+            <div class="stats-grid">
+                <div class="stat-card"><div class="stat-number">14+</div><div class="stat-label">Executive Sectors Covered</div></div>
+                <div class="stat-card"><div class="stat-number">200+</div><div class="stat-label">Candidates Placed</div></div>
+                <div class="stat-card"><div class="stat-number">20+</div><div class="stat-label">Years Industry Experience</div></div>
+                <div class="stat-card"><div class="stat-number">3</div><div class="stat-label">Continents Served</div></div>
+            </div>
+        </div>
+
+        <!-- 14 SECTORS -->
+        <div class="card">
+            <h2>📌 14 Executive Sectors We Cover</h2>
+            <p>We provide comprehensive career guides and resources across the following sectors:</p>
+            <div class="sectors-grid">
+                <div class="sector-item">🚢 Cruise Line Operations</div>
+                <div class="sector-item">🏨 Luxury Hotels - India</div>
+                <div class="sector-item">🕌 Middle East Hospitality</div>
+                <div class="sector-item">🍽️ F&B Management</div>
+                <div class="sector-item">⭐ Front Office Excellence</div>
+                <div class="sector-item">🧹 Housekeeping Admin</div>
+                <div class="sector-item">👨‍🍳 Culinary Arts</div>
+                <div class="sector-item">📊 Revenue & Sales</div>
+                <div class="sector-item">👥 HR & Training</div>
+                <div class="sector-item">🔧 Engineering & Tech</div>
+                <div class="sector-item">⚓ Maritime Deck Dept</div>
+                <div class="sector-item">⚙️ Maritime Engine Dept</div>
+                <div class="sector-item">💆 Wellness & Spa</div>
+                <div class="sector-item">🛍️ Retail & Casino</div>
+            </div>
+            <p style="margin-top:1rem;">Each sector guide includes detailed career paths, salary benchmarks (₹ per annum), top recruiters, required certifications, and tips for success.</p>
+        </div>
+
+        <!-- SERVICES -->
+        <div class="card">
+            <h2>🛠️ What We Offer</h2>
+            <div class="stats-grid">
+                <div class="stat-card"><div class="stat-number">📘</div><div class="stat-label">Free Career Guides</div><div style="font-size:0.8rem; color:#666;">14 sectors, salary data, recruiters</div></div>
+                <div class="stat-card"><div class="stat-number">✍️</div><div class="stat-label">Tailored Resumes</div><div style="font-size:0.8rem; color:#666;">Customized to your skills & experience</div></div>
+                <div class="stat-card"><div class="stat-number">📞</div><div class="stat-label">HR Leads</div><div style="font-size:0.8rem; color:#666;">20+ verified contacts daily</div></div>
+                <div class="stat-card"><div class="stat-number">📋</div><div class="stat-label">SOP Manual</div><div style="font-size:0.8rem; color:#666;">8 department standards</div></div>
+            </div>
+        </div>
+
+        <!-- PACKAGES -->
+        <div class="card">
             <h2>💰 Career Booster Packages</h2>
-            <p>Choose the package that fits your needs. One-time payment. No subscriptions.</p>
-            
+            <p>One-time payment. No subscriptions. Results guaranteed.</p>
             <div class="packages-container">
-                <!-- WHITE PACKAGE -->
                 <div class="package-card">
                     <h3>⚪ White Package</h3>
-                    <div class="package-price">₹49 <span>/ one-time</span></div>
-                    <ul class="package-features">
+                    <div class="price">₹49 <span>/ one-time</span></div>
+                    <ul class="features">
                         <li>Tailored Resume + Cover Letter</li>
                         <li>20+ HR / Employer Contacts</li>
                         <li>Valid for 4 weeks</li>
                         <li>Email & WhatsApp Support</li>
                     </ul>
-                    <a href="https://wa.me/919769351231?text=I%20want%20White%20Package%20₹49" class="btn-purchase" target="_blank">📲 Order on WhatsApp →</a>
+                    <a href="https://wa.me/919769351231?text=I%20want%20White%20Package%20₹49" class="btn" target="_blank">📲 Order Now →</a>
                 </div>
-
-                <!-- GOLD PACKAGE -->
                 <div class="package-card">
                     <h3>🌟 Gold Package</h3>
-                    <div class="package-price">₹99 <span>/ one-time</span></div>
-                    <ul class="package-features">
+                    <div class="price">₹99 <span>/ one-time</span></div>
+                    <ul class="features">
                         <li>Everything in White Package</li>
                         <li><strong>20+ NEW Leads Daily (Mon-Fri)</strong></li>
                         <li><strong>5 Days of Fresh Data</strong></li>
                         <li>Priority Resume Review (24h)</li>
-                        <li>Direct HR Contacts (Emails & Phones)</li>
                     </ul>
-                    <a href="https://wa.me/919769351231?text=I%20want%20Gold%20Package%20₹99" class="btn-purchase btn-gold" target="_blank">📲 Order on WhatsApp →</a>
+                    <a href="https://wa.me/919769351231?text=I%20want%20Gold%20Package%20₹99" class="btn btn-gold" target="_blank">📲 Order Now →</a>
                 </div>
             </div>
-            <p style="text-align:center; margin-top:0.5rem;">📞 <strong>Pay once. Get tailored resume + 5 days of fresh HR/employer data delivered to your WhatsApp.</strong></p>
         </div>
 
-        <div class="content-card">
-            <h2>👨‍💼 For Job Seekers & Candidates</h2>
-            <p>Whether you're a fresh graduate, a mid‑level professional, or a seasoned executive, JobLynk.live provides you with the tools and intelligence to accelerate your career:</p>
-            <ul style="margin-left:1.5rem; margin-top:0.5rem;">
-                <li><strong>📘 14 Executive Sector Guides</strong> – Detailed career paths, salary benchmarks, top recruiters, and required certifications.</li>
-                <li><strong>✍️ Tailored Resume + Cover Letter</strong> – Customized to YOUR skill set, experience level, and target industry. We don't use templates – every document is built from scratch for you.</li>
-                <li><strong>📊 Daily HR / Employer Leads</strong> – Get 20+ verified contacts (emails, phone numbers, WhatsApp) every weekday (Mon-Fri).</li>
-                <li><strong>🏨 Free Industry Resources</strong> – Hotel SOP Manual, interview tips, and skill development guides.</li>
-            </ul>
-            <div class="highlight">⭐ Over 200+ candidates have landed interviews using our resume services and HR leads. You could be next.</div>
-        </div>
-
-        <div class="content-card">
+        <!-- FOR EMPLOYERS -->
+        <div class="card">
             <h2>🏢 For HR Professionals & Employers</h2>
-            <ul style="margin-left:1.5rem;">
-                <li><strong>Direct Access to Active Candidates</strong> – We share your openings with our candidate network (free for verified employers).</li>
-                <li><strong>Verified HR Data</strong> – Daily lead lists help you benchmark your outreach.</li>
-                <li><strong>Partnership Opportunities</strong> – List your vacancies on our platform to reach thousands of hospitality professionals.</li>
+            <p>Finding pre‑screened, motivated executive talent is time‑consuming. JobLynk.live simplifies your hiring process:</p>
+            <ul style="margin-left:1.5rem; margin-top:0.5rem;">
+                <li><strong>📬 Direct Access to Active Candidates</strong> – We share your openings with our candidate network (free for verified employers).</li>
+                <li><strong>📈 Verified HR Data</strong> – Daily lead lists help you benchmark your hiring outreach.</li>
+                <li><strong>🤝 Partnership Opportunities</strong> – List your vacancies on our platform and reach thousands of hospitality professionals.</li>
             </ul>
             <p>Interested? <a href="/contact.html">Contact us</a> for bulk recruitment solutions.</p>
         </div>
 
-        <div class="content-card">
-            <h2>🤝 Free & Paid Resources</h2>
-            <ul style="margin-left:1.5rem;">
-                <li><strong>🆓 Free</strong> – 14 sector career guides, SOP manual, basic job search articles.</li>
-                <li><strong>💎 Paid Packages</strong> – White (₹49) and Gold (₹99) give you tailored resume writing, cover letters, and 5 days of fresh HR leads delivered to WhatsApp.</li>
-            </ul>
-            <p>No subscriptions. No hidden fees. Pay once, get results.</p>
-        </div>
-
-        <div class="content-card">
-            <h2>📞 Let's Talk</h2>
-            <p>📧 <a href="mailto:joblynklive@gmail.com">joblynklive@gmail.com</a> | 📱 WhatsApp: <a href="https://wa.me/919769351231">+91 9769351231</a></p>
-            <p><a href="/contact.html" style="display:inline-block; background:#2c7da0; color:white; padding:10px 20px; border-radius:30px; text-decoration:none; margin-top:1rem;">Contact Us →</a></p>
+        <!-- CONTACT -->
+        <div class="card">
+            <h2>📞 Get in Touch</h2>
+            <p><strong>📧 Email:</strong> <a href="mailto:joblynklive@gmail.com">joblynklive@gmail.com</a></p>
+            <p><strong>📱 WhatsApp:</strong> <a href="https://wa.me/919769351231">+91 9769351231</a></p>
+            <p><strong>📞 Phone:</strong> +91 9769351231</p>
+            <p style="margin-top:1rem;"><a href="/contact.html" style="display:inline-block; background:#2c7da0; color:white; padding:10px 24px; border-radius:30px; text-decoration:none;">Contact Us →</a></p>
         </div>
     </div>
 
