@@ -37,22 +37,23 @@
       box-shadow: 0 25px 50px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.05) !important;
     }
 
-    /* ========== POSTER - BRIGHT & VISIBLE ========== */
+    /* ========== POSTER - NEW DRAMATIC DESIGN ========== */
     .leader-poster {
       width: 520px !important;
       height: 730px !important;
-      background: linear-gradient(145deg, #11212e, #0a1620) !important;
+      background: linear-gradient(145deg, #0a1525, #050a12) !important;
       position: relative !important;
       overflow: hidden !important;
       border-radius: 24px !important;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.5), inset 0 0 0 1px rgba(245,200,66,0.2) !important;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.6), inset 0 0 0 1px rgba(245,200,66,0.3) !important;
       flex-shrink: 0 !important;
     }
 
+    /* Golden corners */
     .corner {
       position: absolute !important;
-      width: 40px !important;
-      height: 40px !important;
+      width: 45px !important;
+      height: 45px !important;
       border-color: #f5c842 !important;
       border-style: solid !important;
       opacity: 1 !important;
@@ -63,16 +64,48 @@
     .corner.bl { bottom: 20px !important; left: 20px !important; border-width: 0 0 3px 3px !important; }
     .corner.br { bottom: 20px !important; right: 20px !important; border-width: 0 3px 3px 0 !important; }
 
-    .glow {
+    /* Dramatic light beam from center */
+    .light-beam {
       position: absolute !important;
-      top: 280px !important;
+      top: 0 !important;
       left: 50% !important;
       transform: translateX(-50%) !important;
-      width: 350px !important;
-      height: 200px !important;
-      background: radial-gradient(ellipse, rgba(245,200,66,0.25) 0%, rgba(245,200,66,0.05) 60%, transparent 100%) !important;
+      width: 200% !important;
+      height: 100% !important;
+      background: radial-gradient(ellipse at 50% 30%, rgba(245,200,66,0.15) 0%, rgba(245,200,66,0) 60%) !important;
       pointer-events: none !important;
       z-index: 0 !important;
+    }
+
+    /* LEADER SILHOUETTE / MOUNTAIN VISUAL */
+    .leader-visual {
+      position: absolute !important;
+      bottom: 180px !important;
+      left: 0 !important;
+      width: 100% !important;
+      height: 350px !important;
+      background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%) !important;
+      z-index: 1 !important;
+    }
+    
+    /* Mountain/summit SVG - represents leadership peak */
+    .mountain-svg {
+      position: absolute !important;
+      bottom: 0 !important;
+      left: 0 !important;
+      width: 100% !important;
+      height: 300px !important;
+      z-index: 2 !important;
+    }
+    
+    /* Flag on peak */
+    .flag-svg {
+      position: absolute !important;
+      top: 340px !important;
+      left: 50% !important;
+      transform: translateX(-50%) !important;
+      width: 40px !important;
+      z-index: 5 !important;
     }
 
     .eyebrow {
@@ -85,7 +118,7 @@
       color: #f5c842 !important;
       text-transform: uppercase !important;
       font-weight: 500 !important;
-      z-index: 5 !important;
+      z-index: 10 !important;
     }
 
     .title-main {
@@ -101,7 +134,7 @@
       color: transparent !important;
       letter-spacing: 10px !important;
       text-shadow: 0 4px 20px rgba(0,0,0,0.3) !important;
-      z-index: 5 !important;
+      z-index: 10 !important;
     }
 
     .divider-line {
@@ -113,40 +146,19 @@
       height: 2px !important;
       background: linear-gradient(90deg, transparent, #f5c842, #f5c842, #f5c842, transparent) !important;
       box-shadow: 0 0 8px rgba(245,200,66,0.5) !important;
-      z-index: 5 !important;
+      z-index: 10 !important;
     }
 
-    .emblem {
+    /* Golden sun behind visual */
+    .sun {
       position: absolute !important;
-      top: 230px !important;
+      top: 420px !important;
       left: 50% !important;
       transform: translateX(-50%) !important;
-      width: 160px !important;
-      height: 160px !important;
+      width: 120px !important;
+      height: 120px !important;
+      background: radial-gradient(circle, rgba(245,200,66,0.3) 0%, rgba(245,200,66,0) 70%) !important;
       border-radius: 50% !important;
-      background: radial-gradient(circle, rgba(245,200,66,0.15) 0%, rgba(245,200,66,0.03) 70%) !important;
-      border: 1px solid rgba(245,200,66,0.3) !important;
-      z-index: 2 !important;
-    }
-    .emblem::before {
-      content: "★" !important;
-      position: absolute !important;
-      top: 50% !important;
-      left: 50% !important;
-      transform: translate(-50%, -50%) !important;
-      font-size: 60px !important;
-      color: rgba(245,200,66,0.4) !important;
-    }
-
-    .rays {
-      position: absolute !important;
-      bottom: 140px !important;
-      left: 50% !important;
-      transform: translateX(-50%) !important;
-      width: 100% !important;
-      height: 200px !important;
-      background: repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(245,200,66,0.08) 40px, rgba(245,200,66,0.08) 42px) !important;
-      pointer-events: none !important;
       z-index: 0 !important;
     }
 
@@ -156,7 +168,7 @@
       width: 100% !important;
       text-align: center !important;
       padding: 0 30px !important;
-      z-index: 10 !important;
+      z-index: 15 !important;
     }
     .poster-quote p {
       font-size: 13px !important;
@@ -164,7 +176,7 @@
       color: #f5e1a0 !important;
       line-height: 1.6 !important;
       font-weight: 400 !important;
-      text-shadow: 0 2px 4px rgba(0,0,0,0.3) !important;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.5) !important;
     }
     .poster-quote p strong {
       color: #f5c842 !important;
@@ -192,14 +204,14 @@
       width: 120px !important;
       height: 2px !important;
       background: linear-gradient(90deg, transparent, #f5c842, transparent) !important;
-      opacity: 0.5 !important;
+      opacity: 0.6 !important;
     }
 
     /* ========== SOCIAL HUB ========== */
     .social-hub {
       flex: 1 !important;
       min-width: 300px !important;
-      background: rgba(8, 18, 28, 0.8) !important;
+      background: rgba(8, 18, 28, 0.85) !important;
       backdrop-filter: blur(12px) !important;
       border-radius: 2rem !important;
       padding: 2rem 1.8rem !important;
@@ -304,25 +316,63 @@
 </head>
 <body class="leader-body">
 <div class="leader-container">
-  <!-- POSTER -->
+  <!-- POSTER - NEW PICTURE: MOUNTAIN PEAK / LEADER SILHOUETTE THEME -->
   <div class="leader-poster">
     <div class="corner tl"></div>
     <div class="corner tr"></div>
     <div class="corner bl"></div>
     <div class="corner br"></div>
-    <div class="glow"></div>
-    <div class="rays"></div>
-    <div class="emblem"></div>
+    
+    <div class="light-beam"></div>
+    <div class="sun"></div>
     
     <div class="eyebrow">THE MAKING OF A</div>
     <div class="title-main">LEADER</div>
     <div class="divider-line"></div>
 
-    <svg style="position: absolute; bottom: 140px; left: 50%; transform: translateX(-50%); width: 380px; height: 280px; pointer-events: none; z-index: 2; opacity: 0.25;" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
-      <polygon points="200,140 40,30 360,30" fill="#f5c842" opacity="0.3"/>
-      <polygon points="200,140 40,260 40,170" fill="#f5c842" opacity="0.2"/>
-      <polygon points="200,140 360,260 360,170" fill="#f5c842" opacity="0.2"/>
-      <circle cx="200" cy="140" r="25" fill="none" stroke="#f5c842" stroke-width="1" opacity="0.4"/>
+    <!-- MAIN VISUAL: Mountain peak with flag - represents leadership summit -->
+    <svg class="mountain-svg" viewBox="0 0 520 300" preserveAspectRatio="none">
+      <!-- Mountain background -->
+      <defs>
+        <linearGradient id="mountGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+          <stop offset="0%" style="stop-color:#0d1b2a;stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#1a304a;stop-opacity:1" />
+        </linearGradient>
+        <linearGradient id="peakGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+          <stop offset="0%" style="stop-color:#2a4a6e;stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#4a7aae;stop-opacity:1" />
+        </linearGradient>
+      </defs>
+      
+      <!-- Left mountain -->
+      <polygon points="0,300 150,120 280,300" fill="url(#mountGrad)" opacity="0.9"/>
+      <!-- Right mountain -->
+      <polygon points="200,300 380,90 520,300" fill="url(#peakGrad)" opacity="0.85"/>
+      <!-- Snow cap left -->
+      <polygon points="150,120 120,180 140,170 160,185 180,165 150,120" fill="#e8eef5" opacity="0.7"/>
+      <!-- Snow cap right (peak) -->
+      <polygon points="380,90 340,155 360,148 380,160 400,150 420,155 380,90" fill="#ffffff" opacity="0.85"/>
+      
+      <!-- Sun/glow behind peak -->
+      <circle cx="380" cy="110" r="35" fill="#f5c842" opacity="0.2"/>
+      <circle cx="380" cy="110" r="20" fill="#f5c842" opacity="0.35"/>
+      
+      <!-- Golden glow rays -->
+      <line x1="380" y1="90" x2="380" y2="60" stroke="#f5c842" stroke-width="1.5" opacity="0.4"/>
+      <line x1="410" y1="105" x2="435" y2="90" stroke="#f5c842" stroke-width="1.5" opacity="0.4"/>
+      <line x1="350" y1="105" x2="325" y2="90" stroke="#f5c842" stroke-width="1.5" opacity="0.4"/>
+      
+      <!-- Flag on peak -->
+      <line x1="380" y1="90" x2="380" y2="55" stroke="#f5c842" stroke-width="2"/>
+      <polygon points="380,55 410,62 380,70" fill="#f5c842" opacity="0.9"/>
+    </svg>
+
+    <!-- Small leader figure ascending (abstract silhouette) -->
+    <svg style="position: absolute; bottom: 195px; left: 55%; transform: translateX(-50%); width: 30px; height: 40px; z-index: 8; opacity: 0.6;" viewBox="0 0 30 40">
+      <circle cx="15" cy="10" r="5" fill="#f5c842" opacity="0.7"/>
+      <rect x="12" y="15" width="6" height="15" rx="2" fill="#f5c842" opacity="0.5"/>
+      <line x1="8" y1="22" x2="18" y2="18" stroke="#f5c842" stroke-width="1.5" opacity="0.5"/>
+      <line x1="22" y1="22" x2="15" y2="18" stroke="#f5c842" stroke-width="1.5" opacity="0.5"/>
     </svg>
 
     <div class="poster-quote">
@@ -336,50 +386,37 @@
     <div class="bottom-accent"></div>
   </div>
 
-  <!-- SOCIAL HUB - ALL LINKS FIXED -->
+  <!-- SOCIAL HUB -->
   <div class="social-hub">
     <div class="hub-header">
       <h2>THE FORGE</h2>
       <div class="sub">join the leader movement</div>
     </div>
     <div class="social-grid">
-      
-      <!-- Instagram - Fixed -->
       <a href="https://www.instagram.com/restgenmgr" class="social-card" target="_blank" rel="noopener noreferrer">
         <div class="social-icon" style="background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);"><i class="fab fa-instagram" style="color:white;"></i></div>
         <div class="social-info"><h3>Instagram</h3><p>@restgenmgr</p></div>
       </a>
-      
-      <!-- X (Twitter) - Fixed -->
       <a href="https://twitter.com/NAThomas1952" class="social-card" target="_blank" rel="noopener noreferrer">
         <div class="social-icon" style="background: #000;"><i class="fab fa-x-twitter" style="color:white;"></i></div>
         <div class="social-info"><h3>X (Twitter)</h3><p>@NAThomas1952</p></div>
       </a>
-      
-      <!-- LinkedIn - Fixed (removed extra www) -->
       <a href="https://linkedin.com/in/nathomas-hospitality" class="social-card" target="_blank" rel="noopener noreferrer">
         <div class="social-icon" style="background: #0077b5;"><i class="fab fa-linkedin-in" style="color:white;"></i></div>
         <div class="social-info"><h3>LinkedIn</h3><p>Nigel Thomas</p></div>
       </a>
-      
-      <!-- YouTube - Fixed -->
       <a href="https://www.youtube.com/@NigelThomas-u1u8w" class="social-card" target="_blank" rel="noopener noreferrer">
         <div class="social-icon" style="background: #ff0000;"><i class="fab fa-youtube" style="color:white;"></i></div>
         <div class="social-info"><h3>YouTube</h3><p>@NigelThomas</p></div>
       </a>
-      
-      <!-- TikTok - Fixed -->
       <a href="https://www.tiktok.com/@restgenmgr" class="social-card" target="_blank" rel="noopener noreferrer">
         <div class="social-icon" style="background: #010101;"><i class="fab fa-tiktok" style="color:white;"></i></div>
         <div class="social-info"><h3>TikTok</h3><p>@restgenmgr</p></div>
       </a>
-      
-      <!-- Facebook - Fixed (corrected URL) -->
       <a href="https://www.facebook.com/FoodBeverageMgr" class="social-card" target="_blank" rel="noopener noreferrer">
         <div class="social-icon" style="background: #4267B2;"><i class="fab fa-facebook-f" style="color:white;"></i></div>
         <div class="social-info"><h3>Facebook</h3><p>FoodBeverageMgr</p></div>
       </a>
-      
     </div>
     <div class="hashtag">#TheMakingOfALeader</div>
     <div class="nav-back"><a href="/"><i class="fas fa-arrow-left"></i> Back to JobLynk.live</a></div>
