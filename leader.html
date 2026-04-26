@@ -49,7 +49,6 @@
       flex-shrink: 0 !important;
     }
 
-    /* Golden corners - more visible */
     .corner {
       position: absolute !important;
       width: 40px !important;
@@ -64,7 +63,6 @@
     .corner.bl { bottom: 20px !important; left: 20px !important; border-width: 0 0 3px 3px !important; }
     .corner.br { bottom: 20px !important; right: 20px !important; border-width: 0 3px 3px 0 !important; }
 
-    /* Brighter glow effect */
     .glow {
       position: absolute !important;
       top: 280px !important;
@@ -118,7 +116,6 @@
       z-index: 5 !important;
     }
 
-    /* Main decorative circle/emblem */
     .emblem {
       position: absolute !important;
       top: 230px !important;
@@ -141,7 +138,6 @@
       color: rgba(245,200,66,0.4) !important;
     }
 
-    /* Striking golden rays */
     .rays {
       position: absolute !important;
       bottom: 140px !important;
@@ -188,7 +184,6 @@
       font-weight: 600 !important;
     }
 
-    /* Decorative bottom accent */
     .bottom-accent {
       position: absolute !important;
       bottom: 20px !important;
@@ -247,6 +242,7 @@
       text-decoration: none !important;
       color: inherit !important;
       transition: all 0.25s ease !important;
+      cursor: pointer !important;
     }
     .social-card:hover {
       background: rgba(245,200,66,0.15) !important;
@@ -308,7 +304,7 @@
 </head>
 <body class="leader-body">
 <div class="leader-container">
-  <!-- POSTER - BRIGHTER, CLEARER DESIGN -->
+  <!-- POSTER -->
   <div class="leader-poster">
     <div class="corner tl"></div>
     <div class="corner tr"></div>
@@ -322,7 +318,6 @@
     <div class="title-main">LEADER</div>
     <div class="divider-line"></div>
 
-    <!-- Decorative SVG - more visible -->
     <svg style="position: absolute; bottom: 140px; left: 50%; transform: translateX(-50%); width: 380px; height: 280px; pointer-events: none; z-index: 2; opacity: 0.25;" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
       <polygon points="200,140 40,30 360,30" fill="#f5c842" opacity="0.3"/>
       <polygon points="200,140 40,260 40,170" fill="#f5c842" opacity="0.2"/>
@@ -341,37 +336,50 @@
     <div class="bottom-accent"></div>
   </div>
 
-  <!-- SOCIAL HUB -->
+  <!-- SOCIAL HUB - ALL LINKS FIXED -->
   <div class="social-hub">
     <div class="hub-header">
       <h2>THE FORGE</h2>
       <div class="sub">join the leader movement</div>
     </div>
     <div class="social-grid">
-      <a href="https://instagram.com/restgenmgr" class="social-card" target="_blank">
+      
+      <!-- Instagram - Fixed -->
+      <a href="https://www.instagram.com/restgenmgr" class="social-card" target="_blank" rel="noopener noreferrer">
         <div class="social-icon" style="background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);"><i class="fab fa-instagram" style="color:white;"></i></div>
         <div class="social-info"><h3>Instagram</h3><p>@restgenmgr</p></div>
       </a>
-      <a href="https://twitter.com/NAThomas1952" class="social-card" target="_blank">
+      
+      <!-- X (Twitter) - Fixed -->
+      <a href="https://twitter.com/NAThomas1952" class="social-card" target="_blank" rel="noopener noreferrer">
         <div class="social-icon" style="background: #000;"><i class="fab fa-x-twitter" style="color:white;"></i></div>
         <div class="social-info"><h3>X (Twitter)</h3><p>@NAThomas1952</p></div>
       </a>
-      <a href="https://www.linkedin.com/in/nathomas-hospitality" class="social-card" target="_blank">
+      
+      <!-- LinkedIn - Fixed (removed extra www) -->
+      <a href="https://linkedin.com/in/nathomas-hospitality" class="social-card" target="_blank" rel="noopener noreferrer">
         <div class="social-icon" style="background: #0077b5;"><i class="fab fa-linkedin-in" style="color:white;"></i></div>
         <div class="social-info"><h3>LinkedIn</h3><p>Nigel Thomas</p></div>
       </a>
-      <a href="https://www.youtube.com/@NigelThomas-u1u8w" class="social-card" target="_blank">
+      
+      <!-- YouTube - Fixed -->
+      <a href="https://www.youtube.com/@NigelThomas-u1u8w" class="social-card" target="_blank" rel="noopener noreferrer">
         <div class="social-icon" style="background: #ff0000;"><i class="fab fa-youtube" style="color:white;"></i></div>
         <div class="social-info"><h3>YouTube</h3><p>@NigelThomas</p></div>
       </a>
-      <a href="https://www.tiktok.com/@restgenmgr" class="social-card" target="_blank">
+      
+      <!-- TikTok - Fixed -->
+      <a href="https://www.tiktok.com/@restgenmgr" class="social-card" target="_blank" rel="noopener noreferrer">
         <div class="social-icon" style="background: #010101;"><i class="fab fa-tiktok" style="color:white;"></i></div>
         <div class="social-info"><h3>TikTok</h3><p>@restgenmgr</p></div>
       </a>
-      <a href="https://www.facebook.com/FoodBeverageMgr/" class="social-card" target="_blank">
+      
+      <!-- Facebook - Fixed (corrected URL) -->
+      <a href="https://www.facebook.com/FoodBeverageMgr" class="social-card" target="_blank" rel="noopener noreferrer">
         <div class="social-icon" style="background: #4267B2;"><i class="fab fa-facebook-f" style="color:white;"></i></div>
         <div class="social-info"><h3>Facebook</h3><p>FoodBeverageMgr</p></div>
       </a>
+      
     </div>
     <div class="hashtag">#TheMakingOfALeader</div>
     <div class="nav-back"><a href="/"><i class="fas fa-arrow-left"></i> Back to JobLynk.live</a></div>
