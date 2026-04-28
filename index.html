@@ -1,396 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LEADER · The Making of a Leader</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body.leader-body {
-      background: linear-gradient(135deg, #0a0f1a 0%, #0a1220 100%) !important;
-      font-family: 'Segoe UI', 'Georgia', serif !important;
-      display: flex !important;
-      justify-content: center !important;
-      align-items: center !important;
-      min-height: 100vh !important;
-      padding: 2rem !important;
-      margin: 0 !important;
-    }
-
-    .leader-container {
-      max-width: 1300px !important;
-      width: 100% !important;
-      display: flex !important;
-      flex-wrap: wrap !important;
-      justify-content: center !important;
-      align-items: center !important;
-      gap: 3rem !important;
-      background: linear-gradient(145deg, #0f1a2b, #0a1220) !important;
-      border-radius: 2rem !important;
-      padding: 2.5rem !important;
-      box-shadow: 0 25px 50px rgba(0,0,0,0.5) !important;
-    }
-
-    /* ========== POSTER ========== */
-    .leader-poster {
-      width: 520px !important;
-      height: 730px !important;
-      background: linear-gradient(145deg, #0d1a2a, #060e18) !important;
-      position: relative !important;
-      overflow: hidden !important;
-      border-radius: 24px !important;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.6), inset 0 0 0 2px rgba(245,200,66,0.2) !important;
-      flex-shrink: 0 !important;
-    }
-
-    /* Golden corners */
-    .corner {
-      position: absolute !important;
-      width: 45px !important;
-      height: 45px !important;
-      border-color: #f5c842 !important;
-      border-style: solid !important;
-      opacity: 1 !important;
-      z-index: 20 !important;
-    }
-    .corner.tl { top: 18px !important; left: 18px !important; border-width: 3px 0 0 3px !important; }
-    .corner.tr { top: 18px !important; right: 18px !important; border-width: 3px 3px 0 0 !important; }
-    .corner.bl { bottom: 18px !important; left: 18px !important; border-width: 0 0 3px 3px !important; }
-    .corner.br { bottom: 18px !important; right: 18px !important; border-width: 0 3px 3px 0 !important; }
-
-    /* Title section */
-    .eyebrow {
-      position: absolute !important;
-      top: 50px !important;
-      width: 100% !important;
-      text-align: center !important;
-      font-size: 11px !important;
-      letter-spacing: 8px !important;
-      color: #f5c842 !important;
-      text-transform: uppercase !important;
-      font-weight: 500 !important;
-      z-index: 15 !important;
-    }
-
-    .title-main {
-      position: absolute !important;
-      top: 75px !important;
-      width: 100% !important;
-      text-align: center !important;
-      font-size: 78px !important;
-      font-weight: 900 !important;
-      background: linear-gradient(135deg, #fff8e7, #f5c842, #d4a017) !important;
-      -webkit-background-clip: text !important;
-      background-clip: text !important;
-      color: transparent !important;
-      letter-spacing: 8px !important;
-      text-shadow: 0 0 20px rgba(245,200,66,0.3) !important;
-      z-index: 15 !important;
-    }
-
-    .divider-line {
-      position: absolute !important;
-      top: 175px !important;
-      left: 50% !important;
-      transform: translateX(-50%) !important;
-      width: 260px !important;
-      height: 2px !important;
-      background: linear-gradient(90deg, transparent, #f5c842, #f5c842, #f5c842, transparent) !important;
-      box-shadow: 0 0 8px rgba(245,200,66,0.6) !important;
-      z-index: 15 !important;
-    }
-
-    /* ===== NEW VECTOR ILLUSTRATION - LEADER WITH TEAM ===== */
-    .leader-illustration {
-      position: absolute !important;
-      top: 210px !important;
-      left: 0 !important;
-      width: 100% !important;
-      height: 380px !important;
-      z-index: 8 !important;
-    }
-
-    .poster-quote {
-      position: absolute !important;
-      bottom: 45px !important;
-      width: 100% !important;
-      text-align: center !important;
-      padding: 0 30px !important;
-      z-index: 20 !important;
-    }
-    .poster-quote p {
-      font-size: 13px !important;
-      font-style: italic !important;
-      color: #f5e1a0 !important;
-      line-height: 1.6 !important;
-      font-weight: 500 !important;
-      text-shadow: 0 1px 3px rgba(0,0,0,0.5) !important;
-    }
-    .poster-quote p strong {
-      color: #f5c842 !important;
-      font-weight: 800 !important;
-    }
-    .poster-pillars {
-      display: flex !important;
-      justify-content: center !important;
-      gap: 35px !important;
-      margin-top: 12px !important;
-    }
-    .poster-pillars span {
-      font-size: 9px !important;
-      letter-spacing: 4px !important;
-      color: #e6b422 !important;
-      text-transform: uppercase !important;
-      font-weight: 700 !important;
-    }
-
-    /* ========== SOCIAL HUB (SAME AS BEFORE) ========== */
-    .social-hub {
-      flex: 1 !important;
-      min-width: 300px !important;
-      background: rgba(8, 18, 28, 0.9) !important;
-      backdrop-filter: blur(12px) !important;
-      border-radius: 2rem !important;
-      padding: 2rem !important;
-      border: 1px solid rgba(245, 200, 66, 0.4) !important;
-    }
-    .hub-header {
-      text-align: center !important;
-      margin-bottom: 2rem !important;
-    }
-    .hub-header h2 {
-      font-size: 2rem !important;
-      background: linear-gradient(135deg, #f5e6b0, #f5c842) !important;
-      -webkit-background-clip: text !important;
-      background-clip: text !important;
-      color: transparent !important;
-    }
-    .social-grid {
-      display: flex !important;
-      flex-direction: column !important;
-      gap: 1rem !important;
-    }
-    .social-card {
-      display: flex !important;
-      align-items: center !important;
-      gap: 1rem !important;
-      background: rgba(0,0,0,0.6) !important;
-      padding: 0.8rem 1.2rem !important;
-      border-radius: 60px !important;
-      border: 1px solid rgba(245,200,66,0.3) !important;
-      text-decoration: none !important;
-      color: inherit !important;
-      transition: all 0.2s !important;
-    }
-    .social-card:hover {
-      background: rgba(245,200,66,0.15) !important;
-      transform: translateX(5px) !important;
-    }
-    .social-icon {
-      width: 48px !important;
-      height: 48px !important;
-      display: flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-      border-radius: 50% !important;
-      font-size: 1.6rem !important;
-    }
-    .social-info h3 {
-      font-size: 1.1rem !important;
-      color: #fff5e6 !important;
-    }
-    .social-info p {
-      font-size: 0.7rem !important;
-      color: #bdd4f0 !important;
-    }
-    .hashtag {
-      text-align: center !important;
-      margin-top: 1.8rem !important;
-      font-size: 0.75rem !important;
-      color: #f5c842 !important;
-    }
-    .nav-back {
-      text-align: center !important;
-      margin-top: 1rem !important;
-    }
-    .nav-back a {
-      color: #f5c842 !important;
-      text-decoration: none !important;
-      font-size: 0.75rem !important;
-    }
-
-    @media (max-width: 960px) {
-      .leader-container { flex-direction: column !important; }
-      .leader-poster { width: 420px !important; height: 590px !important; }
-      .title-main { font-size: 58px !important; top: 65px !important; }
-      .leader-illustration { top: 180px !important; height: 300px !important; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobLynk.live – Executive Digital Resources</title>
+    <meta name="google-adsense-account" content="ca-pub-4282121192943910">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9LDB7E245Y"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-9LDB7E245Y');
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4282121192943910" crossorigin="anonymous"></script>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;}
+        body{font-family:'Segoe UI',Roboto,sans-serif;background:#f0f4f8;color:#1a2a3a;line-height:1.6;}
+        .navbar{background:#0f2b3d;padding:1rem 0;position:sticky;top:0;z-index:1000;}
+        .nav-container{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:0 20px;flex-wrap:wrap;}
+        .logo{color:white;font-size:1.5rem;font-weight:bold;text-decoration:none;}
+        .nav-links{display:flex;gap:1rem;flex-wrap:wrap;}
+        .nav-links a{color:white;text-decoration:none;padding:8px 16px;border-radius:8px;transition:background 0.3s;}
+        .nav-links a:hover{background:#2c7da0;}
+        .header{background:linear-gradient(135deg,#0f2b3d,#1e4a6e);color:white;padding:2rem;text-align:center;}
+        .header h1{font-size:2rem;margin-bottom:0.5rem;}
+        .container{max-width:1200px;margin:2rem auto;padding:0 20px;}
+        h2{color:#0f2b3d;margin-bottom:1rem;}
+        .sector-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin:2rem 0;}
+        .sector-card{background:white;border-radius:16px;padding:1.5rem;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,0.05);transition:transform 0.2s;cursor:pointer;}
+        .sector-card:hover{transform:translateY(-5px);background:#f8fafc;}
+        .sector-card a{text-decoration:none;font-weight:bold;color:#1e4a6e;font-size:1.2rem;display:block;}
+        .sector-card p{color:#666;margin-top:0.5rem;font-size:0.9rem;}
+        .footer{background:#0f1a24;color:#8899aa;text-align:center;padding:2rem;margin-top:2rem;}
+        .footer a{color:#8899aa;margin:0 0.5rem;text-decoration:none;}
+        @media(max-width:768px){.nav-container{flex-direction:column;gap:10px;}}
+    </style>
 </head>
-<body class="leader-body">
-<div class="leader-container">
-  <!-- POSTER SIDE - WITH NEW VECTOR ILLUSTRATION -->
-  <div class="leader-poster">
-    <div class="corner tl"></div>
-    <div class="corner tr"></div>
-    <div class="corner bl"></div>
-    <div class="corner br"></div>
-    
-    <div class="eyebrow">THE MAKING OF A</div>
-    <div class="title-main">LEADER</div>
-    <div class="divider-line"></div>
-
-    <!-- NEW VECTOR ILLUSTRATION: Professional leader with team silhouette -->
-    <div class="leader-illustration">
-      <svg width="100%" height="100%" viewBox="0 0 500 380" preserveAspectRatio="xMidYMid meet">
-        <defs>
-          <linearGradient id="leaderGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" style="stop-color:#f5c842;stop-opacity:0.9" />
-            <stop offset="100%" style="stop-color:#d4a017;stop-opacity:0.7" />
-          </linearGradient>
-          <linearGradient id="teamGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" style="stop-color:#4a7aae;stop-opacity:0.6" />
-            <stop offset="100%" style="stop-color:#2a4a6e;stop-opacity:0.4" />
-          </linearGradient>
-        </defs>
-
-        <!-- Background glow behind leader -->
-        <circle cx="250" cy="180" r="100" fill="url(#leaderGrad)" opacity="0.15"/>
-        <circle cx="250" cy="180" r="60" fill="#f5c842" opacity="0.1"/>
-
-        <!-- Team silhouettes (background) -->
-        <!-- Person 1 - left back -->
-        <g opacity="0.5">
-          <circle cx="100" cy="140" r="12" fill="#3a6a9e"/>
-          <rect x="93" y="152" width="14" height="50" rx="4" fill="#3a6a9e"/>
-          <rect x="90" y="195" width="8" height="35" rx="3" fill="#2a5a8e"/>
-          <rect x="103" y="195" width="8" height="35" rx="3" fill="#2a5a8e"/>
-        </g>
-
-        <!-- Person 2 - right back -->
-        <g opacity="0.5">
-          <circle cx="400" cy="140" r="12" fill="#3a6a9e"/>
-          <rect x="393" y="152" width="14" height="50" rx="4" fill="#3a6a9e"/>
-          <rect x="390" y="195" width="8" height="35" rx="3" fill="#2a5a8e"/>
-          <rect x="403" y="195" width="8" height="35" rx="3" fill="#2a5a8e"/>
-        </g>
-
-        <!-- Person 3 - left mid -->
-        <g opacity="0.6">
-          <circle cx="140" cy="155" r="10" fill="#4a7aae"/>
-          <rect x="134" y="165" width="12" height="42" rx="3" fill="#4a7aae"/>
-          <rect x="131" y="200" width="7" height="30" rx="2" fill="#3a6a9e"/>
-          <rect x="142" y="200" width="7" height="30" rx="2" fill="#3a6a9e"/>
-        </g>
-
-        <!-- Person 4 - right mid -->
-        <g opacity="0.6">
-          <circle cx="360" cy="155" r="10" fill="#4a7aae"/>
-          <rect x="354" y="165" width="12" height="42" rx="3" fill="#4a7aae"/>
-          <rect x="351" y="200" width="7" height="30" rx="2" fill="#3a6a9e"/>
-          <rect x="362" y="200" width="7" height="30" rx="2" fill="#3a6a9e"/>
-        </g>
-
-        <!-- CENTRAL LEADER FIGURE (Bold, prominent) -->
-        <!-- Leader body -->
-        <rect x="230" y="175" width="40" height="70" rx="8" fill="url(#leaderGrad)" opacity="0.9"/>
-        
-        <!-- Leader suit jacket / shoulder details -->
-        <path d="M220 195 L250 200 L280 195 L285 210 L250 215 L215 210 Z" fill="#e6b422" opacity="0.8"/>
-        
-        <!-- Leader tie -->
-        <polygon points="250,195 245,220 250,240 255,220" fill="#f5c842" opacity="0.9"/>
-        
-        <!-- Leader head -->
-        <circle cx="250" cy="165" r="22" fill="url(#leaderGrad)"/>
-        
-        <!-- Leader hair -->
-        <path d="M228 160 Q235 145 250 143 Q265 145 272 160 Q268 150 250 148 Q232 150 228 160" fill="#d4a017" opacity="0.9"/>
-        
-        <!-- Leader face features -->
-        <!-- Eyes -->
-        <circle cx="242" cy="163" r="2.5" fill="#fff"/>
-        <circle cx="258" cy="163" r="2.5" fill="#fff"/>
-        <circle cx="242" cy="163" r="1.5" fill="#333"/>
-        <circle cx="258" cy="163" r="1.5" fill="#333"/>
-        
-        <!-- Confident smile -->
-        <path d="M242 172 Q250 178 258 172" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
-        
-        <!-- Leader podium/platform -->
-        <rect x="220" y="245" width="60" height="12" rx="3" fill="#f5c842" opacity="0.7"/>
-        
-        <!-- Golden glow rays behind leader -->
-        <g opacity="0.15" stroke="#f5c842" stroke-width="2">
-          <line x1="250" y1="140" x2="250" y2="105"/>
-          <line x1="270" y1="142" x2="285" y2="120"/>
-          <line x1="230" y1="142" x2="215" y2="120"/>
-          <line x1="280" y1="155" x2="305" y2="145"/>
-          <line x1="220" y1="155" x2="195" y2="145"/>
-        </g>
-
-        <!-- Stars / dots decoration -->
-        <text x="200" y="110" font-size="12" fill="#f5c842" opacity="0.4">✦</text>
-        <text x="290" y="115" font-size="14" fill="#f5c842" opacity="0.3">✦</text>
-        <text x="180" y="130" font-size="8" fill="#f5c842" opacity="0.3">✦</text>
-        <text x="310" y="130" font-size="10" fill="#f5c842" opacity="0.35">✦</text>
-        
-        <!-- Bottom decorative waves -->
-        <path d="M0 280 Q50 270 100 278 Q150 286 200 275 Q250 264 300 278 Q350 292 400 280 Q450 268 500 280 L500 310 L0 310 Z" fill="#f5c842" opacity="0.08"/>
-      </svg>
-    </div>
-
-    <div class="poster-quote">
-      <p>“<strong>Lead with purpose</strong>, rise with honor.”</p>
-      <div class="poster-pillars">
-        <span>INTEGRITY</span>
-        <span>COURAGE</span>
-        <span>IMPACT</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- SOCIAL HUB -->
-  <div class="social-hub">
-    <div class="hub-header">
-      <h2>🔥 THE FORGE</h2>
-      <div style="font-size: 0.7rem; color: #bcd0f0;">join the leader movement</div>
-    </div>
-    <div class="social-grid">
-      <a href="https://www.instagram.com/director_operations" class="social-card" target="_blank" rel="noopener noreferrer">
-        <div class="social-icon" style="background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);"><i class="fab fa-instagram" style="color:white;"></i></div>
-        <div class="social-info"><h3>Instagram</h3><p>@director_operations</p></div>
-      </a>
-      <a href="https://twitter.com/NAThomas1952" class="social-card" target="_blank" rel="noopener noreferrer">
-        <div class="social-icon" style="background: #000;"><i class="fab fa-x-twitter" style="color:white;"></i></div>
-        <div class="social-info"><h3>X (Twitter)</h3><p>@NAThomas1952</p></div>
-      </a>
-      <a href="https://www.linkedin.com/in/nathomas-hospitality" class="social-card" target="_blank" rel="noopener noreferrer">
-        <div class="social-icon" style="background: #0077b5;"><i class="fab fa-linkedin-in" style="color:white;"></i></div>
-        <div class="social-info"><h3>LinkedIn</h3><p>Nigel Thomas</p></div>
-      </a>
-      <a href="https://www.youtube.com/@NigelThomas-u1u8w" class="social-card" target="_blank" rel="noopener noreferrer">
-        <div class="social-icon" style="background: #ff0000;"><i class="fab fa-youtube" style="color:white;"></i></div>
-        <div class="social-info"><h3>YouTube</h3><p>@NigelThomas</p></div>
-      </a>
-      <a href="https://www.tiktok.com/@restgenmgr" class="social-card" target="_blank" rel="noopener noreferrer">
-        <div class="social-icon" style="background: #010101;"><i class="fab fa-tiktok" style="color:white;"></i></div>
-        <div class="social-info"><h3>TikTok</h3><p>@restgenmgr</p></div>
-      </a>
-      <a href="https://www.facebook.com/FoodBeverageMgr" class="social-card" target="_blank" rel="noopener noreferrer">
-        <div class="social-icon" style="background: #4267B2;"><i class="fab fa-facebook-f" style="color:white;"></i></div>
-        <div class="social-info"><h3>Facebook</h3><p>FoodBeverageMgr</p></div>
-      </a>
-    </div>
-    <div class="hashtag">#TheMakingOfALeader • #ElevateYourCareer • #JobLynk</div>
-    <div class="nav-back"><a href="/"><i class="fas fa-arrow-left"></i> Back to JobLynk.live</a></div>
-  </div>
-</div>
+<body>
+<nav class="navbar"><div class="nav-container"><a href="/" class="logo">JobLynk.live</a><div class="nav-links">
+<a href="/">Home</a>
+<a href="/about.html">About</a>
+<a href="/contact.html">Contact</a>
+<a href="/privacy.html">Privacy</a>
+<a href="/terms.html">Terms</a>
+</div></div></nav>
+<div class="header"><h1>🚀 JobLynk.live</h1><p>Executive Digital Resources for the Modern Indian Professional</p><p style="margin-top:0.5rem; font-size:0.9rem;">LIVE: 20+ New HR Leads Verified Today</p></div>
+<div class="container"><h2>📌 Select Your Executive Sector</h2><div class="sector-grid">
+<div class="sector-card"><a href="/cruise-line-operations.html">🚢 Cruise Line Operations</a><p>Complete career guide for Indian seafarers</p></div>
+<div class="sector-card"><a href="/luxury-hotels-india.html">🏨 Luxury Hotels - India</a><p>Top hotel chains, salaries, career paths</p></div>
+<div class="sector-card"><a href="/middle-east-hospitality.html">🕌 Middle East Hospitality</a><p>Dubai, Qatar, Saudi career opportunities</p></div>
+<div class="sector-card"><a href="/fb-management.html">🍽️ F&B Management</a><p>Restaurants, QSR, cloud kitchens</p></div>
+<div class="sector-card"><a href="/front-office-excellence.html">⭐ Front Office Excellence</a><p>Guest relations, reservations, management</p></div>
+<div class="sector-card"><a href="/housekeeping-admin.html">🧹 Housekeeping Admin</a><p>Standards, KPIs, career progression</p></div>
+<div class="sector-card"><a href="/culinary-arts.html">👨‍🍳 Culinary Arts</a><p>Chef roles, salaries, top institutes</p></div>
+<div class="sector-card"><a href="/revenue-sales.html">📊 Revenue & Sales</a><p>Hotel revenue management, sales careers</p></div>
+<div class="sector-card"><a href="/hr-training.html">👥 HR & Training</a><p>Recruitment, compliance, development</p></div>
+<div class="sector-card"><a href="/engineering-tech.html">🔧 Engineering & Tech</a><p>Maintenance, IT, facilities management</p></div>
+<div class="sector-card"><a href="/maritime-deck.html">⚓ Maritime Deck Dept</a><p>Deck officers, ratings, certifications</p></div>
+<div class="sector-card"><a href="/maritime-engine.html">⚙️ Maritime Engine Dept</a><p>Marine engineers, engine ratings</p></div>
+<div class="sector-card"><a href="/wellness-spa.html">💆 Wellness & Spa</a><p>Spa management, therapist careers</p></div>
+<div class="sector-card"><a href="/retail-casino.html">🛍️ Retail & Casino</a><p>Hotel retail, duty-free, casino ops</p></div>
+</div></div>
+<div class="footer"><p>© 2026 JobLynk.live – Bridging Jobs & Talent</p><p><a href="/privacy.html">Privacy</a> | <a href="/terms.html">Terms</a> | <a href="/contact.html">Contact</a></p></div>
 </body>
 </html>
