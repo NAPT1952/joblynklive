@@ -1,14 +1,88 @@
-<script>
-document.getElementById("jobForm").addEventListener("submit", function(e){
-e.preventDefault();
+<!-- FORM SECTION -->
+<div class="card">
 
-let name=document.getElementById("name").value;
-let email=document.getElementById("email").value;
-let phone=document.getElementById("phone").value;
-let location=document.getElementById("location").value;
-let message=document.getElementById("message").value;
+<h2>Submit Job Details</h2>
 
-window.location.href=`mailto:joblynklive@gmail.com?subject=Job Posting&body=
-Name:${name}%0AEmail:${email}%0APhone:${phone}%0ALocation:${location}%0AMessage:${message}`;
-});
-</script>
+<p>
+Fill the form below and we will publish your vacancy within 24 hours.
+</p>
+
+<br>
+
+<form action="https://formsubmit.co/joblynklive@gmail.com" method="POST">
+
+    <!-- FormSubmit Settings -->
+
+    <input type="hidden" name="_captcha" value="false">
+
+    <input type="hidden" name="_subject" value="New Employer Job Posting - JobLynk.live">
+
+    <input type="hidden" name="_next" value="https://joblynk.live/thankyou.html">
+
+    <!-- Name -->
+
+    <div class="form-group">
+        <input type="text" name="Full Name" placeholder="Your Name" required>
+    </div>
+
+    <!-- Email -->
+
+    <div class="form-group">
+        <input type="email" name="Email" placeholder="Email Address" required>
+    </div>
+
+    <!-- Phone -->
+
+    <div class="form-group">
+        <input type="tel" name="Phone" placeholder="Phone Number" required>
+    </div>
+
+    <!-- Location -->
+
+    <div class="form-group">
+        <input type="text" name="Location" placeholder="Job Location" required>
+    </div>
+
+    <!-- Company -->
+
+    <div class="form-group">
+        <input type="text" name="Company" placeholder="Company Name">
+    </div>
+
+    <!-- Job Title -->
+
+    <div class="form-group">
+        <input type="text" name="Job Title" placeholder="Job Title" required>
+    </div>
+
+    <!-- Openings -->
+
+    <div class="form-group">
+        <input type="number" name="Openings" placeholder="Number of Openings">
+    </div>
+
+    <!-- Salary -->
+
+    <div class="form-group">
+        <input type="text" name="Salary" placeholder="Salary / Compensation">
+    </div>
+
+    <!-- Description -->
+
+    <div class="form-group">
+        <textarea
+            name="Job Description"
+            rows="6"
+            placeholder="Job details, responsibilities, timings, benefits, experience required etc."
+            required></textarea>
+    </div>
+
+    <!-- Submit Button -->
+
+    <button type="submit" class="btn">
+        Submit Job Posting
+    </button>
+
+</form>
+
+</div>
