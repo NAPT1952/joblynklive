@@ -1,87 +1,73 @@
-<!-- FORM SECTION -->
+<!-- FORM -->
 <div class="card">
 
 <h2>Submit Job Details</h2>
 
 <p>
-Fill the form below and we will publish your vacancy within 24 hours.
+Fill the form below and our team will publish your vacancy within 24 hours.
+Employers can post hospitality, retail, BPO, logistics, maritime, hotel, restaurant,
+sales, and international jobs completely free on JobLynk.live.
 </p>
-
-<br>
 
 <form action="https://formsubmit.co/joblynklive@gmail.com" method="POST">
 
-    <!-- FormSubmit Settings -->
-
+    <!-- SETTINGS -->
     <input type="hidden" name="_captcha" value="false">
 
     <input type="hidden" name="_subject" value="New Employer Job Posting - JobLynk.live">
 
     <input type="hidden" name="_next" value="https://joblynk.live/thankyou.html">
 
-    <!-- Name -->
-
+    <!-- NAME -->
     <div class="form-group">
+        <label>Full Name *</label>
         <input type="text" name="Full Name" placeholder="Your Name" required>
     </div>
 
-    <!-- Email -->
-
+    <!-- EMAIL -->
     <div class="form-group">
+        <label>Email Address *</label>
         <input type="email" name="Email" placeholder="Email Address" required>
     </div>
 
-    <!-- Phone -->
-
+    <!-- PHONE -->
     <div class="form-group">
-        <input type="tel" name="Phone" placeholder="Phone Number" required>
+        <label>Phone Number *</label>
+        <input type="tel" name="Phone" placeholder="+91 97693 51231" required>
     </div>
 
-    <!-- Location -->
-
+    <!-- LOCATION -->
     <div class="form-group">
-        <input type="text" name="Location" placeholder="Job Location" required>
+        <label>Job Location *</label>
+        <input type="text" name="Location" placeholder="Mumbai, Dubai, Goa etc." required>
     </div>
 
-    <!-- Company -->
-
+    <!-- JOB TITLE -->
     <div class="form-group">
-        <input type="text" name="Company" placeholder="Company Name">
+        <label>Job Title *</label>
+        <input type="text" name="Job Title" placeholder="Chef, Waiter, Driver, BPO Executive etc." required>
     </div>
 
-    <!-- Job Title -->
-
+    <!-- OPENINGS -->
     <div class="form-group">
-        <input type="text" name="Job Title" placeholder="Job Title" required>
+        <label>Number of Openings *</label>
+        <input type="number" name="Openings" placeholder="5" required>
     </div>
 
-    <!-- Openings -->
-
+    <!-- SALARY -->
     <div class="form-group">
-        <input type="number" name="Openings" placeholder="Number of Openings">
+        <label>Salary *</label>
+        <input type="text" name="Salary" placeholder="₹25,000 per month" required>
     </div>
 
-    <!-- Salary -->
-
+    <!-- DESCRIPTION -->
     <div class="form-group">
-        <input type="text" name="Salary" placeholder="Salary / Compensation">
+        <label>Job Description *</label>
+        <textarea name="Job Description" rows="6" placeholder="Describe duties, timing, experience, accommodation, food, visa, benefits etc." required></textarea>
     </div>
 
-    <!-- Description -->
-
-    <div class="form-group">
-        <textarea
-            name="Job Description"
-            rows="6"
-            placeholder="Job details, responsibilities, timings, benefits, experience required etc."
-            required></textarea>
-    </div>
-
-    <!-- Submit Button -->
-
-    <button type="submit" class="btn">
-        Submit Job Posting
-    </button>
+    <!-- SUBMIT -->
+    <button type="submit">Submit Job Posting</button>
 
 </form>
 
