@@ -1,174 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>JobLynk.live – Career Blog | 32 Articles</title>
-    <meta name="description" content="32 career guides, job search tips, and industry insights for hospitality, maritime, BPO, retail, sales, finance, HR, digital marketing, and tech careers.">
-    
-    <!-- Google AdSense -->
-    <meta name="google-adsense-account" content="ca-pub-4282121192943910">
-
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9LDB7E245Y"></script>
-    <script>
-        window.dataLayer=window.dataLayer||[];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js',new Date());
-        gtag('config','G-9LDB7E245Y');
-    </script>
-
-    <style>
-        *{margin:0;padding:0;box-sizing:border-box;}
-        body{background:#f0f4f8;font-family:Arial,sans-serif;}
-
-        .navbar{background:#0f2b3d;padding:1rem 0;}
-        .nav-container{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:0 20px;flex-wrap:wrap;}
-        .logo{color:white;font-size:1.5rem;font-weight:bold;text-decoration:none;}
-
-        .nav-links{display:flex;gap:1rem;flex-wrap:wrap;}
-        .nav-links a{color:white;text-decoration:none;padding:8px 16px;border-radius:8px;}
-        .nav-links a:hover{background:#2c7da0;}
-        .active{background:#2c7da0;}
-
-        .header{background:linear-gradient(135deg,#0f2b3d,#1e4a6e);color:white;padding:2rem;text-align:center;}
-
-        .container{max-width:1200px;margin:2rem auto;padding:0 20px;}
-
-        .blog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.5rem;}
-
-        .blog-card{background:white;border-radius:1rem;padding:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,0.08);}
-        .blog-card h3 a{color:#0f2b3d;text-decoration:none;}
-
-        .cta{
-            background:#e8f5e9;
-            border:2px solid #27ae60;
-            padding:15px;
-            text-align:center;
-            border-radius:12px;
-            margin-bottom:20px;
-            font-weight:bold;
-        }
-
-        .cta a{
-            color:#27ae60;
-            text-decoration:none;
-        }
-
-        .footer{
-            background:#0f1a24;
-            color:#8899aa;
-            text-align:center;
-            padding:2rem;
-            margin-top:2rem;
-        }
-
-        .footer a{
-            color:#8899aa;
-            margin:0 0.5rem;
-            text-decoration:none;
-        }
-
-        @media(max-width:768px){
-            .nav-container{flex-direction:column;gap:10px;}
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JobLynk Blog - Career Guides, Job Search Tips & Industry Insights 2026</title>
+  <meta name="description" content="Expert career guides, interview tips, and job search strategies. Learn digital marketing, finance, data analysis, and more. Updated for 2026.">
+  <link rel="canonical" href="https://joblynk.live/blog.html">
+  
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #f8f9fa;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    header {
+      background: #fff;
+      padding: 20px 0;
+      border-bottom: 1px solid #e5e7eb;
+      margin-bottom: 40px;
+    }
+    nav a {
+      margin-right: 20px;
+      text-decoration: none;
+      color: #1f2937;
+      font-weight: 500;
+    }
+    nav a:hover { color: #2563eb; }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      color: #111827;
+    }
+    .subtitle {
+      color: #6b7280;
+      margin-bottom: 40px;
+      font-size: 1.1rem;
+    }
+    h2 {
+      font-size: 1.8rem;
+      margin: 50px 0 25px;
+      color: #111827;
+      border-bottom: 3px solid #2563eb;
+      padding-bottom: 10px;
+    }
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 30px;
+      margin-bottom: 60px;
+    }
+    .blog-card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 25px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      transition: transform 0.2s, box-shadow 0.2s;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    .blog-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .blog-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: #2563eb;
+    }
+    .blog-card p {
+      color: #6b7280;
+      font-size: 0.95rem;
+    }
+    .tag {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      padding: 4px 12px;
+      border-radius: 12px;
+      font-size: 0.8rem;
+      margin-top: 12px;
+      font-weight: 600;
+    }
+    footer {
+      margin-top: 80px;
+      padding: 40px 0;
+      border-top: 1px solid #e5e7eb;
+      text-align: center;
+      color: #6b7280;
+    }
+    @media (max-width: 768px) {
+      h1 { font-size: 2rem; }
+      .blog-grid { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
-
 <body>
-
-<!-- NAVBAR -->
-<nav class="navbar">
-    <div class="nav-container">
-        <a href="index.html" class="logo">JobLynk.live</a>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="blog.html" class="active">Blog</a>
-            <a href="employer.html">Employer</a>
-            <a href="advertise.html">Advertise</a>
-            <a href="contact.html">Contact</a>
-        </div>
-    </div>
-</nav>
-
-<!-- HEADER -->
-<div class="header">
-    <h1>Career Insights Blog</h1>
-    <p>All 32 career guides and job insights</p>
-</div>
-
-<!-- WHATSAPP CTA -->
-<div class="container">
-    <div class="cta">
-        Looking for a job? 
-        <a href="https://wa.me/919769351231" target="_blank">
-            Message us on WhatsApp and we’ll guide you →
-        </a>
-    </div>
-
-    <!-- BLOG GRID -->
-    <div class="blog-grid">
-
-        <div class="blog-card"><h3><a href="blog/blog1.html">1. Customer Service Jobs</a></h3><p>Complete guide to customer service careers.</p></div>
-        <div class="blog-card"><h3><a href="blog/blog2.html">2. Sales Jobs</a></h3><p>High income without tech skills.</p></div>
-        <div class="blog-card"><h3><a href="blog/blog3.html">3. Data Entry Jobs</a></h3><p>Easy entry into office work.</p></div>
-        <div class="blog-card"><h3><a href="blog/blog4.html">4. Retail Jobs</a></h3><p>Start your career quickly.</p></div>
-        <div class="blog-card"><h3><a href="blog/blog5.html">5. Hospitality Jobs</a></h3><p>Hotels and restaurants careers.</p></div>
-        <div class="blog-card"><h3><a href="blog/blog6.html">6. Delivery & Logistics Jobs</a></h3><p>Fast-growing e-commerce careers.</p></div>
-        <div class="blog-card"><h3><a href="blog/blog7.html">7. Office Assistant Jobs</a></h3><p>Entry-level corporate roles.</p></div>
-        <div class="blog-card"><h3><a href="blog/blog8.html">8. BPO Jobs</a></h3><p>Call center and customer support.</p></div>
-        <div class="blog-card"><h3><a href="blog/blog9.html">9. Banking & Finance Jobs</a></h3><p>Stable career with growth.</p></div>
-        <div class="blog-card"><h3><a href="blog/blog10.html">10. HR Jobs</a></h3><p>Talent acquisition and payroll.</p></div>
-
-        <div class="blog-card"><h3><a href="cruise-line-operations.html">11. Cruise Line Operations</a></h3><p>Guide for Indian seafarers.</p></div>
-        <div class="blog-card"><h3><a href="cst-mumbai-jobs.html">12. CST Mumbai Restaurant Jobs</a></h3><p>Urgent openings in Mumbai.</p></div>
-
-        <div class="blog-card"><h3><a href="data-analysis-python.html">13. Data Analysis with Python</a></h3><p>Pandas and NumPy guide.</p></div>
-        <div class="blog-card"><h3><a href="data-cleaning.html">14. Data Cleaning Techniques</a></h3><p>Clean data effectively.</p></div>
-        <div class="blog-card"><h3><a href="data-scientist-roadmap.html">15. Data Scientist Roadmap</a></h3><p>Step-by-step career path.</p></div>
-        <div class="blog-card"><h3><a href="data-visualization.html">16. Data Visualization Tools</a></h3><p>Tableau, Power BI, Python.</p></div>
-
-        <div class="blog-card"><h3><a href="digital-marketing-careers.html">17. Digital Marketing Careers</a></h3><p>SEO, social media, PPC.</p></div>
-        <div class="blog-card"><h3><a href="finance-accounting-careers.html">18. Finance & Accounting</a></h3><p>From entry-level to CFO.</p></div>
-
-        <div class="blog-card"><h3><a href="hr-recruitment-careers.html">19. HR & Recruitment</a></h3><p>Complete HR career guide.</p></div>
-        <div class="blog-card"><h3><a href="hr-training.html">20. HR Training & Development</a></h3><p>Learning and development careers.</p></div>
-
-        <div class="blog-card"><h3><a href="hungary-jobs.html">21. Hungary Jobs - Budapest</a></h3><p>Urgent openings in Europe.</p></div>
-        <div class="blog-card"><h3><a href="interview-mastery.html">22. Interview Mastery</a></h3><p>Ace your job interviews.</p></div>
-
-        <div class="blog-card"><h3><a href="machine-learning-basics.html">23. Machine Learning Basics</a></h3><p>Understand ML fundamentals.</p></div>
-
-        <div class="blog-card"><h3><a href="operations-logistics-careers.html">24. Operations & Supply Chain</a></h3><p>Logistics and warehouse careers.</p></div>
-
-        <div class="blog-card"><h3><a href="python-libraries.html">25. Top Python Libraries</a></h3><p>Pandas, NumPy, Matplotlib.</p></div>
-
-        <div class="blog-card"><h3><a href="resume-writing.html">26. Resume Writing</a></h3><p>Professional resume tips.</p></div>
-
-        <div class="blog-card"><h3><a href="revenue-sales.html">27. Revenue & Sales Hospitality</a></h3><p>Hotel revenue management.</p></div>
-
-        <div class="blog-card"><h3><a href="sales-b2b-careers.html">28. B2B & B2C Sales</a></h3><p>High-earning sales careers.</p></div>
-
-        <div class="blog-card"><h3><a href="sql-guide.html">29. SQL for Data Analysts</a></h3><p>Essential SQL queries guide.</p></div>
-
-        <div class="blog-card"><h3><a href="seo-ranking-guide.html">30. SEO Ranking Guide</a></h3><p>How to rank #1 on Google.</p></div>
-
-        <div class="blog-card"><h3><a href="job-search-guide.html">31. Job Search Guide</a></h3><p>How to find jobs fast.</p></div>
-
-        <div class="blog-card"><h3><a href="interview-tips.html">32. Interview Tips</a></h3><p>How to crack any interview.</p></div>
-
-    </div>
-</div>
-
-<!-- FOOTER -->
-<div class="footer">
-    <p>
-        © 2026 JobLynk.live |
-        <a href="blog.html">Blog</a> |
-        <a href="employer.html">Employer</a> |
-        <a href="advertise.html">Advertise</a> |
+  <header>
+    <div class="container">
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="blog.html">Blog</a>
+        <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
-    </p>
-</div>
+      </nav>
+    </div>
+  </header>
 
-</body>
-</html>
+  <main class="container">
+    <h1>JobLynk Blog</h1>
+    <p class="subtitle">Career guides, job search strategies, and industry insights to land your dream job in 2026.</p>
+
+    <!-- Career Guides Section -->
+    <h2>Career Guides 2026</h2>
+    <div class="blog-grid">
+      <a href="digital-marketing-career.html" class="blog-card">
+        <h3>Digital Marketing Career Guide</h3>
+        <p>Complete roadmap: skills, certifications, salary ranges, and how to start with zero experience. Freelance vs full-time paths explained.</p>
+        <span class="tag">Career Guide</span>
+      </a>
+
+      <a href="finance-accounting-career.html" class="blog-card">
+        <h3>Finance & Accounting Career Path</h3>
+        <p>From fresher to ₹12LPA. CA vs MBA vs CFA. Companies hiring now + certifications that actually matter in 2026.</p>
+        <span class="tag">Career Guide</span>
+      </a>
+
+      <a href="data-analysis-python.html" class="blog-card">
+        <h3>Data Analysis with Python Roadmap</h3>
+        <p>Learn Pandas, SQL, and visualization. Step-by-step 6-month plan + portfolio projects that get you hired.</p>
+        <span class="tag">Data Science</span>
+      </a>
+
+      <a href="interview-tips.html" class="blog-card">
+        <h3>Interview Tips That Get You Hired</h3>
+        <p>HR secrets, STAR method frameworks, and answers to 50+ common questions. What to say when you have no experience.</p>
+        <span class="tag">Interview Prep</span>
+      </a>
+    </div>
+
+    <!-- Existing Blog Posts Section -->
+    <h2>Job Search & Industry Guides</h2>
+    <div class="blog-grid">
+      <a href="ai-agents-2026.html" class="blog-card">
+        <h3>AI Agents Will Replace These Jobs in 2026</h3>
+        <p>Which roles are safe and how to upskill before automation hits your industry.</p>
+        <span class="tag">AI & Tech</span>
+      </a>
+
+      <a href="cruise-ship-job-documents-checklist-2026.html" class="blog-card">
+        <h3>Cruise Ship Job Documents Checklist 2026</h3>
+        <p>Complete list of certificates, medical tests, and paperwork needed for cruise line jobs.</p>
+        <span class="tag">Cruise Jobs</span>
+      </a>
+
+      <a href="resume-writing.html" class="blog-card">
+        <h3>Resume Writing That Gets Interviews</h3>
+        <p>ATS-friendly templates, keywords that work, and mistakes that get you rejected instantly.</p>
+        <span class="tag">Job Search</span>
+      </a>
+
+      <a href="job-search-guide.html" class="blog-card">
+        <h3>Hidden Job Market: How to Find Unlisted Jobs</h3>
+        <p>80% of jobs aren’t posted online. Here’s how to tap into referrals and direct outreach.</p>
+        <span class="tag">Job Search</span>
+      </a>
+
+      <a href="blog1.html" class="blog-card">
+        <h3>Blog Post 1</h3>
+        <p>Update this title and description with your actual content from blog1.html.</p>
+        <span class="tag">Guide</span>
+      </a>
+
+      <a href="blog2.html" class="blog-card">
+        <h3>Blog Post 2</h3>
+        <p>Update this title and description with your actual
